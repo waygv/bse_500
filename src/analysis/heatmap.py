@@ -30,9 +30,9 @@ def _agent_log(hypothesis_id: str, location: str, message: str, data):
 
 def build_heatmap_figures() -> Tuple[px.treemap, px.treemap]:
     """Builds index and market treemap figures."""
-    index_df = pd.read_csv("Index.csv")
+    index_df = pd.read_csv("data/processed/Index.csv")
     index_df.columns = index_df.columns.str.strip()
-    market_df = pd.read_csv("MarketWatch.csv")
+    market_df = pd.read_csv("data/processed/MarketWatch.csv")
     market_df.columns = market_df.columns.str.strip()
 
     # Convert numeric columns safely

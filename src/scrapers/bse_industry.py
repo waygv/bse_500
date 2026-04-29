@@ -9,13 +9,12 @@ import os
 
 
 chrome_options = Options()
-#chrome_options.add_argument("--headless")
+#chrome_options.add_argument("--headless")  
 chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--no-sandbox")
 
-# === Set up download directory ===
-download_dir = r"C:\Users\vinay\OneDrive\Desktop\core\bse_500"  
 
+download_dir = os.path.join(os.getcwd(), "data", "processed")  
 prefs = {
     "download.default_directory": download_dir,
     "download.prompt_for_download": False,
@@ -24,10 +23,10 @@ prefs = {
 }
 chrome_options.add_experimental_option("prefs", prefs)
 
-service = Service()
+service = Service()  
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
-url = "https://www.bseindia.com/markets/equity/EQReports/MarketWatch.html?index_code=17"
+url = "https://www.bseindia.com/sensex/IndexHighlight.html"
 driver.get(url)
 
 try:

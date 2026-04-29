@@ -9,9 +9,9 @@ from fastapi import FastAPI, BackgroundTasks, HTTPException
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-from heatmap import build_heatmap_figures
-from llm_parser_gemini import process_single_company
-from main_scraper_orchestration import run_all, SCRIPTS_CONFIG, TARGET_COMPANY
+from src.analysis.heatmap import build_heatmap_figures
+from src.analysis.llm_parser_gemini import process_single_company
+from src.main_scraper_orchestration import run_all, SCRIPTS_CONFIG, TARGET_COMPANY
 
 DEBUG_LOG_PATH = r"c:\Users\vinay\OneDrive\Desktop\core\bse_500\.cursor\debug.log"
 SESSION_ID = "debug-session"
@@ -66,8 +66,8 @@ def _build_script_plan(company: Optional[str]) -> List[Dict[str, Any]]:
     if company:
         config.extend(
             [
-                {"name": "bse_companywise.py", "args": [company]},
-                {"name": "exportersindia_dom_scraper.py", "args": [company]},
+                {"name": "src/scrapers/bse_companywise.py", "args": [company]},
+                {"name": "src/scrapers/exportersindia_dom_scraper.py", "args": [company]},
             ]
         )
     config.extend(SCRIPTS_CONFIG)

@@ -11,13 +11,13 @@ TARGET_COMPANY = "CIPLA"
 
 # === Scripts to run (base stack) ===
 SCRIPTS_CONFIG = [
-    {"name": "bse_500_watchlist.py", "args": []},
-    {"name": "bse_industry.py", "args": []},
-    {"name": "heatmap.py", "args": []},
+    {"name": "src/scrapers/bse_500_watchlist.py", "args": []},
+    {"name": "src/scrapers/bse_industry.py", "args": []},
+    {"name": "src/analysis/heatmap.py", "args": []},
 ]
 
 # === Logging setup (existing run log) ===
-LOG_FILE = "scraper_orchestration.log"
+LOG_FILE = "logs/scraper_orchestration.log"
 logging.basicConfig(
     filename=LOG_FILE,
     level=logging.INFO,

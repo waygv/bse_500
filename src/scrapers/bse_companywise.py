@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import os
 import sys
 import pyautogui
 import pyperclip
@@ -82,10 +83,11 @@ try:
     page_content = pyperclip.paste()
     
     # Save to TXT file
-    with open(f"{company_name}_xbrl.txt", "w", encoding="utf-8") as f:
+    filepath = os.path.join("data", "raw", f"{company_name}_xbrl.txt")
+    with open(filepath, "w", encoding="utf-8") as f:
         f.write(page_content)
     
-    print(f"✅ XBRL content copied via clipboard and saved for {company_name}")
+    print(f"✅ XBRL content copied via clipboard and saved for {company_name} to {filepath}")
 
 except Exception as e:
     print(f"❌ Failed to copy XBRL content: {e}")

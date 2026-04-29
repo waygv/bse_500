@@ -35,7 +35,7 @@ def _agent_log(hypothesis_id: str, location: str, message: str, data: Dict[str, 
 
 def _load_market_df() -> pd.DataFrame:
     try:
-        df = pd.read_csv("MarketWatch.csv")
+        df = pd.read_csv("data/processed/MarketWatch.csv")
         _agent_log("H3", "llm_parser_gemini.py:_load_market_df", "marketwatch_loaded", {"rows": len(df)})
         return df
     except FileNotFoundError:
@@ -45,7 +45,7 @@ def _load_market_df() -> pd.DataFrame:
 
 def load_text_data() -> Dict[str, str]:
     data: Dict[str, str] = {}
-    txt_files = glob.glob("*.txt")
+    txt_files = glob.glob("data/raw/*.txt")
     _agent_log("H3", "llm_parser_gemini.py:load_text_data", "txt_scan", {"count": len(txt_files)})
     for file in txt_files:
         company_name = os.path.basename(file).split("_")[0].upper()
@@ -124,8 +124,8 @@ def process_all_companies(run_id: str = "prefill") -> List[Dict[str, Any]]:
 
     if output_data:
         final_df = pd.DataFrame(output_data)
-        final_df.to_csv("Parsed_Company_Data.csv", index=False)
-        print("\n✅ Extraction completed. Saved to Parsed_Company_Data.csv")
+        final_df.to_csv("data/processed/Parsed_Company_Data.csv", index=False)
+        print("\n✅ Extraction completed. Saved to data/processed/Parsed_Company_Data.csv")
     else:
         print("\n⚠️ No valid results generated.")
 

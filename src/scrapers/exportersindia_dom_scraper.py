@@ -37,7 +37,7 @@ def scrape_exportersindia(company_name):
 
         # Save to .txt file
         filename = f"{company_name.replace(' ', '_')}_exportersindia.txt"
-        filepath = os.path.join(os.getcwd(), filename)
+        filepath = os.path.join(os.getcwd(), "data", "raw", filename)
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(text_data)
 
