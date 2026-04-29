@@ -6,7 +6,15 @@ import time
 import pyperclip  # to access clipboard
 import pyautogui  # to send Ctrl+A / Ctrl+C
 import os
-import sys # Import sys for command-line arguments
+import sys
+
+# === HARDCODED COMPANY NAME ===
+TARGET_COMPANY = "CIPLA"  # <--- CHANGE THIS TO YOUR TARGET COMPANY
+
+# Get project root (2 levels up from src/scrapers/)
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+DATA_RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
+os.makedirs(DATA_RAW_DIR, exist_ok=True)
 
 def scrape_exportersindia(company_name):
     # Replace spaces with '+'
@@ -37,24 +45,18 @@ def scrape_exportersindia(company_name):
 
         # Save to .txt file
         filename = f"{company_name.replace(' ', '_')}_exportersindia.txt"
-        filepath = os.path.join(os.getcwd(), "data", "raw", filename)
+        filepath = os.path.join(DATA_RAW_DIR, filename)
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(text_data)
 
-        print(f"✅ Data copied and saved to {filepath}")
+        print(f"SUCCESS: Data saved to {filepath}")
     except Exception as e:
-        print(f"Error during scraping or saving: {e}")
-        sys.stderr.write(f"An error occurred in exportersindia_dom_scraper for {company_name}: {str(e)}\n")
-        sys.exit(1) # Exit with non-zero code to signal failure
+        print(f"ERROR: Error during scraping or saving: {e}")
     finally:
         driver.quit()
 
 if __name__ == "__main__":
-    # --- MODIFICATION: Get company name from command-line argument ---
-    if len(sys.argv) < 2:
-        print("Error: Company name required as argument.")
-        sys.exit(1)
-    company = sys.argv[1]
-    print(f"Exporters India Scraper started for: {company}")
-    # ----------------------------------------------------------------
+    # Use hardcoded name or fall back to sys.argv
+    company = TARGET_COMPANY or (sys.argv[1] if len(sys.argv) > 1 else "DefaultCompany")
+    print(f"START: Exporters India Scraper started for: {company}")
     scrape_exportersindia(company)

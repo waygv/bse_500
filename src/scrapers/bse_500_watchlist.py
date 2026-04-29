@@ -7,6 +7,10 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
 
+# Get project root (2 levels up from src/scrapers/)
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+DATA_PROCESSED_DIR = os.path.join(BASE_DIR, "data", "processed")
+os.makedirs(DATA_PROCESSED_DIR, exist_ok=True)
 
 chrome_options = Options()
 #chrome_options.add_argument("--headless")
@@ -14,10 +18,8 @@ chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--no-sandbox")
 
 # === Set up download directory ===
-download_dir = os.path.join(os.getcwd(), "data", "processed")  
-
 prefs = {
-    "download.default_directory": download_dir,
+    "download.default_directory": DATA_PROCESSED_DIR,
     "download.prompt_for_download": False,
     "download.directory_upgrade": True,
     "safebrowsing.enabled": True
@@ -37,11 +39,9 @@ try:
     )
 
     download_icon.click()
-    print("Download button clicked.")
+    print(f"DONE: Download button clicked for MarketWatch. Downloading to {DATA_PROCESSED_DIR}")
 
     time.sleep(10)  
 
 finally:
     driver.quit()
-
-print(f"Excel file should be downloaded to: {download_dir}")

@@ -1,0 +1,19 @@
+2026-04-29 17:59:10,983 - INFO - === SCRAPER ORCHESTRATION STARTED ===
+2026-04-29 17:59:10,983 - INFO - Target company: CIPLA
+2026-04-29 17:59:10,984 - INFO - START: Running bse_500_watchlist.py with args: []
+2026-04-29 17:59:27,993 - INFO - SUCCESS: bse_500_watchlist.py completed successfully
+2026-04-29 17:59:27,994 - INFO - ----------------------------------------
+2026-04-29 17:59:27,994 - INFO - START: Running bse_industry.py with args: []
+2026-04-29 17:59:44,330 - INFO - SUCCESS: bse_industry.py completed successfully
+2026-04-29 17:59:44,330 - INFO - ----------------------------------------
+2026-04-29 17:59:44,331 - INFO - START: Running heatmap.py with args: []
+2026-04-29 17:59:46,782 - INFO - SUCCESS: heatmap.py completed successfully
+2026-04-29 17:59:46,783 - INFO - ----------------------------------------
+2026-04-29 17:59:46,783 - INFO - START: Running bse_companywise.py with args: ['CIPLA']
+2026-04-29 17:59:52,399 - INFO - SUCCESS: bse_companywise.py completed successfully
+2026-04-29 17:59:52,400 - INFO - ----------------------------------------
+2026-04-29 17:59:52,400 - INFO - START: Running exportersindia_dom_scraper.py with args: ['CIPLA']
+2026-04-29 18:00:05,843 - INFO - SUCCESS: exportersindia_dom_scraper.py completed successfully
+2026-04-29 18:00:05,844 - INFO - ----------------------------------------
+2026-04-29 18:00:05,844 - INFO - === ALL SCRIPTS COMPLETED IN 0:00:54.860633 ===
+2026-04-29 18:00:05,844 - INFO - Logs saved to: c:\Users\vinay\OneDrive\Desktop\core\bse_500\logs\scraper_orchestration.log
