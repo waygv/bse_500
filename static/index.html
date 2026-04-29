@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BSE 500 Dashboard</title>
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 16px; background: #f7f9fb; }
+    h1 { margin-top: 0; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .card { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    button { padding: 8px 12px; border: none; background: #2563eb; color: #fff; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #1d4ed8; }
+    input { padding: 8px; border: 1px solid #d1d5db; border-radius: 6px; }
+    #analysis { white-space: pre-wrap; background: #0f172a; color: #e2e8f0; padding: 12px; border-radius: 8px; min-height: 200px; }
+    #status { margin-top: 6px; color: #475569; }
+  </style>
+</head>
+<body>
+  <h1>BSE 500 Market Dashboard</h1>
+  <div class="controls">
+    <input id="companyInput" placeholder="Company (default CIPLA)" />
+    <button id="runBtn">Run Scrapers</button>
+    <button id="analysisBtn">LLM Analysis</button>
+    <span id="status"></span>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Index Heatmap</h3>
+      <div id="indexChart"></div>
+    </div>
+    <div class="card">
+      <h3>Market Heatmap (click a company node for LLM analysis)</h3>
+      <div id="marketChart"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px;">
+    <h3>LLM Company Analysis</h3>
+    <div id="analysis">Click a node on the Market heatmap or use the button above.</div>
+  </div>
+
+  <script>
+    const statusEl = document.getElementById('status');
+    const analysisEl = document.getElementById('analysis');
+    const companyInput = document.getElementById('companyInput');
+
+    async function loadHeatmaps() {
+      statusEl.textContent = 'Loading heatmaps...';
+      try {
+        const res = await fetch('/api/heatmap');
+        const data = await res.json();
+        Plotly.react('indexChart', data.index_fig.data, data.index_fig.layout);
+        Plotly.react('marketChart', data.market_fig.data, data.market_fig.layout);
+        statusEl.textContent = 'Heatmaps loaded. Click a market node for analysis.';
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent = 'Failed to load heatmaps.';
+      }
+    }
+
+    async function runScrapers() {
+      statusEl.textContent = 'Starting scrapers...';
+      const company = companyInput.value.trim();
+      const body = new URLSearchParams();
+      if (company) body.append('company', company);
+      const res = await fetch('/api/run-scrapers?' + body.toString(), { method: 'POST' });
+      const data = await res.json();
+      statusEl.textContent = `Scrapers started (runId=${data.runId}). Refresh heatmap after completion.`;
+    }
+
+    async function fetchAnalysis(company) {
+      if (!company) return;
+      statusEl.textContent = `Running LLM analysis for ${company}...`;
+      analysisEl.textContent = 'Loading...';
+      const res = await fetch(`/api/analysis?company=${encodeURIComponent(company)}`);
+      const data = await res.json();
+      if (data.analysis) {
+        analysisEl.textContent = JSON.stringify(data.analysis, null, 2);
+        statusEl.textContent = `Analysis ready for ${company}.`;
+      } else {
+        analysisEl.textContent = JSON.stringify(data, null, 2);
+        statusEl.textContent = 'Analysis response received.';
+      }
+    }
+
+    document.getElementById('runBtn').onclick = runScrapers;
+    document.getElementById('analysisBtn').onclick = () => fetchAnalysis(companyInput.value || 'CIPLA');
+
+    document.getElementById('marketChart').on('plotly_click', (e) => {
+      const label = e.points?.[0]?.label || e.points?.[0]?.id || e.points?.[0]?.text;
+      if (label) {
+        companyInput.value = label;
+        fetchAnalysis(label);
+      }
+    });
+
+    loadHeatmaps();
+  </script>
+</body>
+</html>

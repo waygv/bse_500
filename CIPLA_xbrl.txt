@@ -1,0 +1,748 @@
+
+Integrated Filing (Finance) Ind AS
+
+CIPLA LIMITED
+
+General Information
+Scrip code*	500087
+NSE Symbol*	CIPLA
+MSEI Symbol*	NOTLISTED
+ISIN*	INE059A01026
+Type of company	Main Board
+Class of security	Equity
+Date of start of financial year	01-04-2025
+Date of end of financial year	31-03-2026
+Date of board meeting when results were approved	30-10-2025
+Date on which prior intimation of the meeting for considering financial results was informed to the exchange	24-09-2025
+Description of presentation currency	INR
+Level of rounding	Crores
+Reporting Type	Quarterly
+Reporting Quarter	Second quarter
+Nature of report standalone or consolidated	Standalone
+Whether results are audited or unaudited for the quarter ended	Unaudited
+Whether results are audited or unaudited for the Year to date for current period ended/year ended	Unaudited
+Segment Reporting	Single segment
+Description of single segment	Pharmaceutical
+Start date of board meeting	30-10-2025
+Start time of board meeting	09:30:00
+End date of board meeting	30-10-2025
+End time of board meeting	13:30:00
+Whether cash flow statement is applicable on company	true
+Type of cash flow statement	Cash Flow Indirect
+Declaration of unmodified opinion or statement on impact of audit qualification	Not applicable
+Whether the company has any related party?	true
+Whether the company has entered into any Related Party transaction during the selected half year for which it wants to submit disclosure?	true
+(I) We declare that the acceptance of fixed deposits by the bans/Non-Banking Finance Company are at the terms uniformly applicable/offered to all shareholders/public	NA
+(II) We declare that the scheduled commercial bank, as per RBI circular RBI/DBR/2015-16/19 dated March 03, 2016, has allowed additional interest of one per cent per annum, over and above the rate of interest mentioned in the schedule of interest rates on savings or a term deposits of bank's staff and their exclusive associations as well as on deposits of Chairman, Chairman & Managing Director, Executive Director or such other Executives appointed for a fixed tenure.	NA
+(III) Whether the company is a 'high value debt listed entity' according to regulation 15 (1A)?	false
+(a) If answer to above question is Yes, whether complying with proviso to regulation 23 (9), i.e., submitting RPT disclosures on the day of results publication?	
+(b) If answer to above question is No, please explain the reason for not complying.	
+Whether the updated Related Party Transactions (RPT) Policy (in compliance with Reg. 23 of SEBI LODR) has been uploaded on the website of the Company?	true
+Latest Date on which RPT policy is updated	28-01-2025
+Indicate Company website link for updated RPT policy of the Company	https://www.cipla.com/sites/default/files/2025-03/Policy-on-Related-Party-Transaction_clean.pdf
+Whether statement on deviation or variation for proceeds of public issue, rights issue, preferential issue, qualified institutions placement etc. is applicable to the company for the current quarter?	false
+No. of times funds raised during the quarter	
+Whether the disclosure for the Default on Loans and Debt Securities is applicable to the entity?	false	Textual Information(1)
+
+Text Block
+Textual Information(1)	Not Applicable.
+Financial Results - Ind-AS
+Amount in (Crores)
+
+Particulars	3 months/ 6 months ended (dd-mm-yyyy)	Year to date figures for current period ended (dd-mm-yyyy)
+Date of start of reporting period	01-07-2025	01-04-2025
+Date of end of reporting period	30-09-2025	30-09-2025
+Whether results are audited or unaudited	Unaudited	Unaudited
+Nature of report standalone or consolidated	Standalone	Standalone
+Part I	Blue color marked fields are non-mandatory. For Consolidated Results, if the company has no figures for 3 months / 6 months ended, in such case zero shall be inserted in the said column.
+1	Income	
+Revenue from operations	5,225.72	10,271.89
+Other income	254.66	525.73
+Total income	5,480.38	10,797.62
+2	Expenses	
+(a)	Cost of materials consumed	1,005.18	2,022.95
+(b)	Purchases of stock-in-trade	530.39	1,077.82
+(c)	Changes in inventories of finished goods, work-in-progress and stock-in-trade	23.89	(119.90)
+(d)	Employee benefit expense	840.01	1,658.31
+(e)	Finance costs	2.65	8.53
+(f)	Depreciation, depletion and amortisation expense	141.30	286.99
+(g)	Other Expenses	
+1	Other Expenses	1,303.62	2,485.63
+Total other expenses	1,303.62	2,485.63
+Total expenses	3,847.04	7,420.33
+3	Total profit before exceptional items and tax	1,633.34	3,377.29
+4	Exceptional items	0.00	0.00
+5	Total profit before tax	1,633.34	3,377.29
+6	Tax expense	
+7	Current tax	412.22	868.26
+8	Deferred tax	10.59	(4.63)
+9	Total tax expenses	422.81	863.63
+10	Net movement in regulatory deferral account balances related to profit or loss and the related deferred tax movement	0.00	0.00
+11	Net Profit Loss for the period from continuing operations	1,210.53	2,513.66
+12	Profit (loss) from discontinued operations before tax	0.00	0.00
+13	Tax expense of discontinued operations	0.00	0.00
+14	Net profit (loss) from discontinued operation after tax	0.00	0.00
+15	Share of profit (loss) of associates and joint ventures accounted for using equity method	0.00	0.00
+16	Total profit (loss) for period	1,210.53	2,513.66
+17	Other comprehensive income net of taxes	(84.41)	(88.32)
+18	Total Comprehensive Income for the period	1,126.12	2,425.34
+19	Total profit or loss, attributable to	
+Profit or loss, attributable to owners of parent		
+Total profit or loss, attributable to non-controlling interests		
+20	Total Comprehensive income for the period attributable to	
+Comprehensive income for the period attributable to owners of parent		
+Total comprehensive income for the period attributable to owners of parent non-controlling interests		
+21	Details of equity share capital	
+Paid-up equity share capital	161.55	161.55
+Face value of equity share capital	2.00	2.00
+22	Reserves excluding revaluation reserve		
+23	Earnings per share	
+i	Earnings per equity share for continuing operations	
+Basic earnings (loss) per share from continuing operations	14.99	31.12
+Diluted earnings (loss) per share from continuing operations	14.98	31.10
+ii	Earnings per equity share for discontinued operations	
+Basic earnings (loss) per share from discontinued operations	0.00	0.00
+Diluted earnings (loss) per share from discontinued operations	0.00	0.00
+iii	Earnings per equity share (for continuing and discontinued operations)	
+Basic earnings (loss) per share from continuing and discontinued operations	14.99	31.12
+Diluted earnings (loss) per share from continuing and discontinued operations	14.98	31.10
+24	Debt equity ratio		
+25	Debt service coverage ratio		
+26	Interest service coverage ratio		
+27	Remarks for debt equity ratio	
+28	Remarks for debt service coverage ratio	
+29	Remarks for interest service coverage ratio	
+30	Disclosure of notes on financial results	Textual Information(1)
+
+Text Block
+Textual Information(1)	1. The above financial results are prepared in accordance with the Indian Accounting Standard prescribed under section 133 of the Companies Act, 2013 and are in compliance with the presentation and disclosure requirements of Regulation 33 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 (as amended). ' 2. The National Pharmaceutical Pricing Authority ("NPPA") issued several demand notices to the Company commencing from the year 1998 seeking recovery of alleged overcharge regarding scheduled drugs under the Drugs (Prices Control) Orders-1995 ("DPCO"). ' ' In 1999 and 2000, the Company filed writ petitions before the Hon'ble Bombay High Court ("Bombay HC") challenging inclusion of certain drugs under DPCO and challenging the demand notices issued by NPPA demanding payment of alleged overcharged amounts. On 31st August, 2001, by way of its common judgment, the Bombay HC decided the writ petitions in favor of the Company, thereby holding that these drugs do not fall within the purview of DPCO and also quashed the demand notices raised by NPPA. The NPPA appealed the order to the Hon'ble Supreme Court ("SC"). ' ' On 1st August, 2003, SC set aside the Bombay HC judgment and remanded the matter to the Bombay HC for being considered afresh by it. Further, the SC stayed recovery of 50% of the alleged overcharged amounts subject to payment of the remaining 50% of the alleged overcharged amounts pending fresh determination by the Bombay HC. Accordingly, in terms of SC's Judgment the Company deposited an amount of Rs. 175.08 Crores with NPPA, representing 50% of the alleged overcharged amounts in respect of demand notices raised till 2003. ' ' Post 2003, the company continued to receive demands ("Subsequent demands") alleging overcharging. These demands included several duplicate demands. In 2019, the Company applied to the Bombay HC to amend its pleadings to include: (i) subsequent demands (ii) to take on record the NPPA/Government of India's RTI response on unavailability of any records pertinent to and what should have been the basis for inclusion of these drugs under the DPCO (iii) deduction of trade margin of 16% from outstanding demands (as having not accrued to the Company, as manufacturer) basis the Allahabad HC's TC Healthcare judgment (iv) re-calculation of interest from the due date of demand notice and (v) duplication of several demands. ' The Bombay HC vide order dated 23rd February, 2024 allowed the amendment conditional upon the Company depositing 50% of the subsequent demands raised. The Company appealed the Bombay HC order in a special leave petition before the SC. On 19th April, 2024, the SC was pleased to issue notice and the matter is pending to be heard further. Without prejudice to the Company's position of no amount being due towards the alleged overcharge (principal) or consequential interest, on 15th July 2025 the Company voluntarily deposited an additional Rs. 27.07 Crores with the NPPA against certain demand notices. ' ' The Company has reviewed all the notices/communications received which are attributable to the Company and are under litigation. After removing duplications as indicated above, the amount covered by the notices/communications aggregates to Rs. 2,011 Crores with the principal of Rs. 863 Crores and interest of Rs. 1,148 Crores. ' The Company has been legally advised that it expects a favourable outcome in respect of this matter and therefore no provision is considered necessary in respect of the demand notices received till date. ' ' 3. The paid-up equity share capital stands increased to Rs. 161.55 Crores (80,77,65,695 equity shares of face value Rs. 2 each) upon allotment of 9,336 equity shares and 5,138 equity shares of Rs. 2 each pursuant to "ESOS 2013-A" and "Cipla ESAR Scheme 2021" respectively during the quarter ended 30th September, 2025. ' ' 4. Exceptional items for the year ended 31st March, 2025, represents Rs. 294.66 Crores with respect to reversal of impairment loss recognized in earlier years for the investment in the wholly owned subsidiary, Cipla Pharma and Life Sciences Limited. ' ' 5. The figures of the previous year/periods have been regrouped/recast to render them comparable with the figures of the current period. ' ' 6. The above results have been reviewed and recommended to the Board of Directors by the Audit Committee and subsequently approved by the Board of Directors at its meeting held on 30th October, 2025. These results have been subjected to limited review by statutory auditors who have expressed an unmodified review conclusion.
+Other Comprehensive Income
+Amount in (Crores)
+
+Particulars	3 months/ 6 months ended (dd-mm-yyyy)	Year to date figures for current period ended (dd-mm-yyyy)
+Date of start of reporting period	01-07-2025	01-04-2025
+Date of end of reporting period	30-09-2025	30-09-2025
+Whether results are audited or unaudited	Unaudited	Unaudited
+Nature of report standalone or consolidated	Standalone	Standalone
+Other comprehensive income [Abstract]	
+1	Amount of items that will not be reclassified to profit and loss	
+1	Items that will not be reclassified to profit or loss	0.12	(5.72)
+Total Amount of items that will not be reclassified to profit and loss	0.12	(5.72)
+2	Income tax relating to items that will not be reclassified to profit or loss	0.03	(1.44)
+3	Amount of items that will be reclassified to profit and loss	
+1	Items that will be reclassified to profit or loss	(112.92)	(112.30)
+Total Amount of items that will be reclassified to profit and loss	(112.92)	(112.30)
+4	Income tax relating to items that will be reclassified to profit or loss	(28.42)	(28.26)
+5	Total Other comprehensive income	(84.41)	(88.32)
+Statement of Asset and Liabilities
+Amount in (Crores)
+
+Particulars	Half Year ended (dd-mm-yyyy)
+Date of start of reporting period	01-04-2025
+Date of end of reporting period	30-09-2025
+Whether results are audited or unaudited	Unaudited
+Nature of report standalone or consolidated	Standalone
+Assets	
+1	Non-current assets	
+Property, plant and equipment	3,654.58
+Capital work-in-progress	580.81
+Investment property	58.23
+Goodwill	0.00
+Other intangible assets	296.46
+Intangible assets under development	259.15
+Biological assets other than bearer plants	0.00
+Investments accounted for using equity method	0.00
+Non-current financial assets	
+Non-current investments	10,622.05
+Trade receivables, non-current	0.00
+Loans, non-current	1,413.24
+Other non-current financial assets	544.79
+Total non-current financial assets	12,580.08
+Deferred tax assets (net)	54.21
+Other non-current assets	712.66
+Total non-current assets	18,196.18
+2	Current assets	
+Inventories	3,962.50
+Current financial asset	
+Current investments	6,852.24
+Trade receivables, current	5,311.49
+Cash and cash equivalents	137.45
+Bank balance other than cash and cash equivalents	16.26
+Loans, current	0.14
+Other current financial assets	2,227.84
+Total current financial assets	14,545.42
+Current tax assets (net)	0.00
+Other current assets	738.33
+Total current assets	19,246.25
+3	Non-current assets classified as held for sale	2.21
+4	Regulatory deferral account debit balances and related deferred tax Assets	0.00
+Total assets	37,444.64
+Equity and liabilities	
+1	Equity	
+Equity attributable to owners of parent	
+Equity share capital	161.55
+Other equity	33,083.08
+Total equity attributable to owners of parent	33,244.63
+Non controlling interest	
+Total equity	33,244.63
+2	Liabilities	
+Non-current liabilities	
+Non-current financial liabilities	
+Borrowings, non-current	0.00
+Trade payables, non-current	
+(A) Total outstanding dues of micro enterprises and small enterprises	0.00
+(B) Total outstanding dues of creditors other than micro enterprises and small enterprises	0.00
+Total Trade payable	0.00
+Other non-current financial liabilities	316.89
+Total non-current financial liabilities	316.89
+Provisions, non-current	112.37
+Deferred tax liabilities (net)	0.00
+Deferred government grants, Non-current	0.00
+Other non-current liabilities	55.33
+Total non-current liabilities	484.59
+Current liabilities	
+Current financial liabilities	
+Borrowings, current	0.97
+Trade payables, current	
+(A) Total outstanding dues of micro enterprises and small enterprises	170.01
+(B) Total outstanding dues of creditors other than micro enterprises and small enterprises	1,882.29
+Total Trade payable	2,052.30
+Other current financial liabilities	452.93
+Total current financial liabilities	2,506.20
+Other current liabilities	113.31
+Provisions, current	789.61
+Current tax liabilities (Net)	306.30
+Deferred government grants, Current	0.00
+Total current liabilities	3,715.42
+3	Liabilities directly associated with assets in disposal group classified as held for sale	0.00
+4	Regulatory deferral account credit balances and related deferred tax liability	0.00
+Total liabilities	4,200.01
+Total equity and liabilites	37,444.64
+Disclosure of notes on assets and liabilities	Textual Information(1)
+
+Text Block
+Textual Information(1)	Cash Flow: ' ' 1. The above statement of cash flow has been prepared under the 'Indirect method' as set out in Indian Accounting Standard (Ind AS) 7 - Statement of Cash Flows. ' 2. Purchase and sale of property, plant and equipment represents additions and deletions to property, plant and equipment and investment properties adjusted for movement of capital work in progress, capital advances, capital creditors during the period.
+Cash flow statement indirect
+Amount in (Crores)
+
+Particulars	Half Year ended (dd-mm-yyyy)
+Date of start of reporting period	01-04-2025
+Date of end of reporting period	30-09-2025
+Whether results are audited or unaudited	Unaudited
+Nature of report standalone or consolidated	Standalone
+Part I	Blue color marked fields are non-mandatory.
+1	Statement of cash flows	
+Cash flows from used in operating activities	
+Profit before tax	3,377.29
+2	Adjustments for reconcile profit (loss)	
+Adjustments for finance costs	8.53
+Adjustments for decrease (increase) in inventories	(355.38)
+Adjustments for decrease (increase) in trade receivables, current	(1,598.07)
+Adjustments for decrease (increase) in trade receivables, non-current	0.00
+Adjustments for decrease (increase) in other current assets	0.00
+Adjustments for decrease (increase) in other non-current assets	0.00
+Adjustments for other financial assets, non-current	0.00
+Adjustments for other financial assets, current	0.00
+Adjustments for other bank balances	0.00
+Adjustments for increase (decrease) in trade payables, current	74.82
+Adjustments for increase (decrease) in trade payables, non-current	0.00
+Adjustments for increase (decrease) in other current liabilities	0.00
+Adjustments for increase (decrease) in other non-current liabilities	0.00
+Adjustments for depreciation and amortisation expense	286.99
+Adjustments for impairment loss reversal of impairment loss recognised in profit or loss	0.00
+Adjustments for provisions, current	0.00
+Adjustments for provisions, non-current	0.00
+Adjustments for other financial liabilities, current	0.00
+Adjustments for other financial liabilities, non-current	0.00
+Adjustments for unrealised foreign exchange losses gains	(3.54)
+Adjustments for dividend income	0.00
+Adjustments for interest income	144.48
+Adjustments for share-based payments	12.22
+Adjustments for fair value losses (gains)	(60.81)
+Adjustments for undistributed profits of associates	0.00
+Other adjustments for which cash effects are investing or financing cash flow	(219.91)
+Other adjustments to reconcile profit (loss)	0.00
+Other adjustments for non-cash items	5.22
+Share of profit and loss from partnership firm or association of persons or limited liability partnerships	0.00
+Total adjustments for reconcile profit (loss)	(1,994.41)
+Net cash flows from (used in) operations	1,382.88
+Dividends received	(9.65)
+Interest paid	0.00
+Interest received	0.00
+Income taxes paid (refund)	565.20
+Other inflows (outflows) of cash	0.00
+Net cash flows from (used in) operating activities	808.03
+3	Cash flows from used in investing activities	
+Cash flows from losing control of subsidiaries or other businesses	0.00
+Cash flows used in obtaining control of subsidiaries or other businesses	121.98
+Other cash receipts from sales of equity or debt instruments of other entities	0.00
+Other cash payments to acquire equity or debt instruments of other entities	5.01
+Other cash receipts from sales of interests in joint ventures	0.00
+Other cash payments to acquire interests in joint ventures	0.00
+Cash receipts from share of profits of partnership firm or association of persons or limited liability partnerships	0.00
+Cash payment for investment in partnership firm or association of persons or limited liability partnerships	0.00
+Proceeds from sales of property, plant and equipment	4.79
+Purchase of property, plant and equipment	322.43
+Proceeds from sales of investment property	0.00
+Purchase of investment property	0.00
+Proceeds from sales of intangible assets	44.05
+Purchase of intangible assets	133.29
+Proceeds from sales of intangible assets under development	0.00
+Purchase of intangible assets under development	0.00
+Proceeds from sales of goodwill	0.00
+Purchase of goodwill	0.00
+Proceeds from biological assets other than bearer plants	0.00
+Purchase of biological assets other than bearer plants	0.00
+Proceeds from government grants	0.00
+Proceeds from sales of other long-term assets	0.00
+Purchase of other long-term assets	5.19
+Cash advances and loans made to other parties	353.62
+Cash receipts from repayment of advances and loans made to other parties	212.23
+Cash payments for future contracts, forward contracts, option contracts and swap contracts	0.00
+Cash receipts from future contracts, forward contracts, option contracts and swap contracts	0.00
+Dividends received	9.65
+Interest received	90.14
+Income taxes paid (refund)	0.00
+Other inflows (outflows) of cash	1,138.09
+Net cash flows from (used in) investing activities	557.43
+4	Cash flows from used in financing activities	
+Proceeds from changes in ownership interests in subsidiaries	0.00
+Payments from changes in ownership interests in subsidiaries	0.00
+Proceeds from issuing shares	0.03
+Proceeds from issuing other equity instruments	0.00
+Payments to acquire or redeem entity's shares	0.00
+Payments of other equity instruments	0.00
+Proceeds from exercise of stock options	0.00
+Proceeds from issuing debentures notes bonds etc	0.00
+Proceeds from borrowings	0.97
+Repayments of borrowings	0.00
+Payments of lease liabilities	11.74
+Dividends paid	1,292.40
+Interest paid	7.95
+Income taxes paid (refund)	0.00
+Other inflows (outflows) of cash	0.00
+Net cash flows from (used in) financing activities	(1,311.09)
+Net increase (decrease) in cash and cash equivalents before effect of exchange rate changes	54.37
+5	Effect of exchange rate changes on cash and cash equivalents	
+Effect of exchange rate changes on cash and cash equivalents	0.34
+Net increase (decrease) in cash and cash equivalents	54.71
+Cash and cash equivalents cash flow statement at beginning of period	82.74
+Cash and cash equivalents cash flow statement at end of period	137.45
+Audit qualification
+Sr.	Details of Audit Qualification	Type of Audit Qualification	Frequency of qualification	For Audit Qualification(s) where the impact is quantified by the auditor	For Audit Qualification(s) where the impact is not quantified by the auditor
+Management's Views	(i) Management's estimation on the impact of audit qualification	(ii) If management is unable to estimate the impact, reasons for the same	Auditors Comments on (i) or (ii) above
+No records available
+Format for Disclosure of Related Party Transactions (applicable only for half-yearly filings i.e., 2nd and 4th quarter)
+Amount in (Crores)
+
+Additional disclosure of related party transactions - applicable only in case the related party transaction relates to loans, inter-corporate deposits, advances or investments made or given by the listed entity/subsidiary. These details need to be disclosed only once, during the reporting period when such transaction was undertaken.
+Sr. No.	Details of the party (listed entity /subsidiary) entering into the transaction	Details of the counterparty	Type of related party transaction	Details of other related party transaction	Value of the related party transaction as approved by the audit committee	Remarks on approval by audit committee	Value of the related party transaction ratified by the audit committee	Date of Audit Committee Meeting where the ratification was approved	Value of transaction during the reporting period	In case monies are due to either party as a result of the transaction	In case any financial indebtedness is incurred to make or give loans, inter-corporate deposits, advances or investments	Details of the loans, inter-corporate deposits, advances or investments
+Name	Name	Relationship of the counterparty with the listed entity or its subsidiary	Opening balance	Closing balance	Nature of indebtedness (loan/ issuance of debt/ any other etc.)	Details of other indebtedness	Cost	Tenure	Nature (loan/ advance/ intercorporate deposit/ investment)	Interest Rate (%)	Tenure	Secured/ unsecured	Purpose for which the funds will be utilised by the ultimate recipient of funds (endusage)	Notes
+1	Cipla Limited	A S Kumar	Director of subsidiary	Any other transaction	Professional Fees	6.00	Approved			4.74	0.00	0.00										
+2	Cipla Limited	AMP Energy Green Eleven Private Limited	Associate	Any other transaction	Electricity charges paid	12.00	Approved			4.40	0.00	0.00										
+3	Cipla Limited	AMPIN Power Systems Private Limited	Associate	Any other transaction	Electricity charges paid	20.00	Approved			5.48	0.00	0.00										
+4	Cipla Limited	Aspergen Inc.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	1.00	Approved			0.37	0.00	0.00										
+5	Cipla Limited	Aspergen Inc.	Holding-Subsidiary	Sale of goods or services		50.00	Approved			2.29	0.00	0.00										
+6	Cipla Limited	Breathe Free Lanka (Private) Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.07	0.00	0.00										
+7	Cipla Limited	Breathe Free Lanka (Private) Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			91.80	0.00	0.00										
+8	Cipla Limited	Cipla (EU) Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.05	0.00	0.00										
+9	Cipla Limited	Cipla (EU) Limited	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			4.23	0.00	0.00										
+10	Cipla Limited	Cipla (EU) Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			103.29	0.00	0.00										
+11	Cipla Limited	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.26	0.00	0.00										
+12	Cipla Limited	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.14	0.00	0.00										
+13	Cipla Limited	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.12	0.00	0.00										
+14	Cipla Limited	Cipla Australia Pty Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.04	0.00	0.00										
+15	Cipla Limited	Cipla Australia Pty Limited	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			5.68	0.00	0.00										
+16	Cipla Limited	Cipla Australia Pty Limited	Holding-Subsidiary	Any other transaction	Royalty Income	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			4.98	0.00	0.00										
+17	Cipla Limited	Cipla Australia Pty Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			18.74	0.00	0.00										
+18	Cipla Limited	Cipla Brasil Importadora E Distribuidora De Medicamentos Ltda.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			17.02	0.00	0.00										
+19	Cipla Limited	Cipla Brasil Importadora E Distribuidora De Medicamentos Ltda.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+20	Cipla Limited	Cipla Brasil Importadora E Distribuidora De Medicamentos Ltda.	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			26.88	0.00	0.00										
+21	Cipla Limited	Cipla (China) Pharmaceutical Co., Ltd.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.12	0.00	0.00										
+22	Cipla Limited	Cipla (China) Pharmaceutical Co., Ltd.	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			4.55	0.00	0.00										
+23	Cipla Limited	Cipla Colombia SAS	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+24	Cipla Limited	Cipla Colombia SAS	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			21.90	0.00	0.00										
+25	Cipla Limited	Cipla Digital Health Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.07	0.00	0.00										
+26	Cipla Limited	Cipla Digital Health Limited	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			8.78	0.00	0.00										
+27	Cipla Limited	Cipla Digital Health Limited	Holding-Subsidiary	Any other transaction	Royalty Income	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.00	0.00	0.00										
+28	Cipla Limited	Cipla Digital Health Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.02	0.00	0.00										
+29	Cipla Limited	Cipla Europe NV	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			13.67	0.00	0.00										
+30	Cipla Limited	Cipla Europe NV	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.03	0.00	0.00										
+31	Cipla Limited	Cipla Europe NV	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			98.80	0.00	0.00										
+32	Cipla Limited	Cipla Foundation	The entity over which the KMP or relatives of KMP are able to exercise significant influence/control	Any other transaction	CSR and CER Contributions	110.00	Approved			41.70	0.00	0.00										
+33	Cipla Limited	Cipla Gulf FZ-LLC	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.35	0.00	0.00										
+34	Cipla Limited	Cipla Gulf FZ-LLC	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+35	Cipla Limited	Cipla Gulf FZ-LLC	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			26.37	0.00	0.00										
+36	Cipla Limited	Cipla Health Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.20	0.00	0.00										
+37	Cipla Limited	Cipla Health Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.45	0.00	0.00										
+38	Cipla Limited	Cipla Health Limited	Holding-Subsidiary	Any other transaction	Technical Know-How/Fees received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+39	Cipla Limited	Cipla Health Limited	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			43.68	0.00	0.00										
+40	Cipla Limited	Cipla Health Limited	Holding-Subsidiary	Any other transaction	Royalty Income	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			13.89	0.00	0.00										
+41	Cipla Limited	Cipla Health Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			36.02	0.00	0.00										
+42	Cipla Limited	Cipla Holding B.V.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+43	Cipla Limited	Cipla Holding B.V.	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			4.32	0.00	0.00										
+44	Cipla Limited	Cipla Holding B.V.	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+45	Cipla Limited	Cipla Kenya Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.09	0.00	0.00										
+46	Cipla Limited	Cipla Kenya Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+47	Cipla Limited	Cipla Kenya Limited	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			7.08	0.00	0.00										
+48	Cipla Limited	Cipla Kenya Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			7.12	0.00	0.00										
+49	Cipla Limited	Cipla Limited Employees Gratuity Fund	Post Employment Benefit Trust	Any other transaction	Contribution to Gratuity Fund	150.00	Approved			23.90	0.00	0.00										
+50	Cipla Limited	Cipla Limited Employees Provident Fund	Post Employment Benefit Trust	Any other transaction	Contribution to Provident Fund	190.00	Approved			31.86	0.00	0.00										
+51	Cipla Limited	Cipla Malaysia Sdn. Bhd.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+52	Cipla Limited	Cipla Malaysia Sdn. Bhd.	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			4.62	0.00	0.00										
+53	Cipla Limited	Cipla Malaysia Sdn. Bhd.	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.00	0.00	0.00										
+54	Cipla Limited	Cipla Maroc SA	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	4.00	Approved			0.07	0.00	0.00										
+55	Cipla Limited	Cipla Maroc SA	Holding-Subsidiary	Any other transaction	Royalty Income	0.50	Approved			0.02	0.00	0.00										
+56	Cipla Limited	Cipla Maroc SA	Holding-Subsidiary	Sale of goods or services		119.00	Approved			31.44	0.00	0.00										
+57	Cipla Limited	Cipla Medpro Manufacturing (Pty) Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	1.00	Approved			0.04	0.00	0.00										
+58	Cipla Limited	Cipla Medpro Manufacturing (Pty) Limited	Holding-Subsidiary	Sale of goods or services		51.00	Approved			1.55	0.00	0.00										
+59	Cipla Limited	Cipla Medpro South Africa (Pty) Limited	Holding-Subsidiary	Interest received		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			28.44	0.00	0.00										
+60	Cipla Limited	Cipla Medpro South Africa (Pty) Limited	Holding-Subsidiary	Any other transaction	Royalty Income	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			21.30	0.00	0.00										
+61	Cipla Limited	Cipla Pharma and Life Sciences Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			4.04	0.00	0.00										
+62	Cipla Limited	Cipla Pharma and Life Sciences Limited	Holding-Subsidiary	Purchase of fixed assets		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.53	0.00	0.00										
+63	Cipla Limited	Cipla Pharma and Life Sciences Limited	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			17.78	0.00	0.00										
+64	Cipla Limited	Cipla Pharma and Life Sciences Limited	Holding-Subsidiary	Any other transaction	Rent Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.67	0.00	0.00										
+65	Cipla Limited	Cipla Pharma and Life Sciences Limited	Holding-Subsidiary	Any other transaction	Royalty Income	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			17.37	0.00	0.00										
+66	Cipla Limited	Cipla Pharma and Life Sciences Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			213.12	0.00	0.00										
+67	Cipla Limited	Cipla Pharmaceuticals Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.41	0.00	0.00										
+68	Cipla Limited	Cipla Pharmaceuticals Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.08	0.00	0.00										
+69	Cipla Limited	Cipla Pharmaceuticals Limited	Holding-Subsidiary	Any other transaction	Rent Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.08	0.00	0.00										
+70	Cipla Limited	Cipla Pharmaceuticals Limited	Holding-Subsidiary	Any other transaction	Rent Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+71	Cipla Limited	Cipla Pharmaceuticals Limited	Holding-Subsidiary	Sale of fixed assets		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.07	0.00	0.00										
+72	Cipla Limited	Cipla Pharmaceuticals Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.13	0.00	0.00										
+73	Cipla Limited	Cipla Select (Pty) Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			23.99	0.00	0.00										
+74	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Any other transaction	Loan repaid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			212.23	0.00	0.00										
+75	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			109.80	0.00	0.00										
+76	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.09	0.00	0.00										
+77	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Interest received		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			19.11	0.00	0.00										
+78	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Loan		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			337.62	0.00	0.00										
+79	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			14.80	0.00	0.00										
+80	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Any other transaction	Royalty Income	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			694.77	0.00	0.00										
+81	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1,524.99	0.00	0.00										
+82	Cipla Limited	CiplaRNA GmbH	Holding-Subsidiary	Any other transaction	Testing and Analysis Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			3.31	0.00	0.00										
+83	Cipla Limited	Clean Max Auriga Power Llp	Associate	Any other transaction	Electricity charges paid	11.00	Approved			4.53	0.00	0.00										
+84	Cipla Limited	Societe Marocaine De Cooperation Pharmaceutique (Cooper)	Related party of a subsidiary	Sale of goods or services		50.00	Approved			17.14	0.00	0.00										
+85	Cipla Limited	Exelan Pharmaceuticals Inc.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			7.25	0.00	0.00										
+86	Cipla Limited	Exelan Pharmaceuticals Inc.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.02	0.00	0.00										
+87	Cipla Limited	Exelan Pharmaceuticals Inc.	Holding-Subsidiary	Any other transaction	Royalty Income	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			217.71	0.00	0.00										
+88	Cipla Limited	Exelan Pharmaceuticals Inc.	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			5.68	0.00	0.00										
+89	Cipla Limited	Geena Malhotra	Director of subsidiary	Any other transaction	Professional Fees	2.00	Approved			0.98	0.00	0.00										
+90	Cipla Limited	GoApptiv Private Limited	Associate	Any other transaction	Reimbursement Charges Paid	15.00	Approved			1.00	0.00	0.00										
+91	Cipla Limited	GoApptiv Private Limited	Associate	Purchase of goods or services		35.00	Approved			14.38	0.00	0.00										
+92	Cipla Limited	GoApptiv Private Limited	Associate	Sale of goods or services		12.00	Approved			0.02	0.00	0.00										
+93	Cipla Limited	Goldencross Pharma Limited	Holding-Subsidiary	Any other transaction	Processing charges paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			23.13	0.00	0.00										
+94	Cipla Limited	Goldencross Pharma Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			2.47	0.00	0.00										
+95	Cipla Limited	Goldencross Pharma Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.31	0.00	0.00										
+96	Cipla Limited	Goldencross Pharma Limited	Holding-Subsidiary	Purchase of fixed assets		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.00	0.00	0.00										
+97	Cipla Limited	Goldencross Pharma Limited	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			77.97	0.00	0.00										
+98	Cipla Limited	Goldencross Pharma Limited	Holding-Subsidiary	Sale of fixed assets		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+99	Cipla Limited	Goldencross Pharma Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.91	0.00	0.00										
+100	Cipla Limited	ICaltech Innovations Private Limited	Associate	Sale of goods or services		1.00	Approved			0.00	0.00	0.00										
+101	Cipla Limited	InvaGen Pharmaceuticals Inc.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			13.74	0.00	0.00										
+102	Cipla Limited	InvaGen Pharmaceuticals Inc.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.58	0.00	0.00										
+103	Cipla Limited	InvaGen Pharmaceuticals Inc.	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			6.07	0.00	0.00										
+104	Cipla Limited	InvaGen Pharmaceuticals Inc.	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.46	0.00	0.00										
+105	Cipla Limited	Jay Precision Pharmaceuticals Private Limited	Holding-Subsidiary	Purchase of goods or services		220.00	Approved			71.25	0.00	0.00										
+106	Cipla Limited	Jay Precision Products (India) Private Limited	Related party of a subsidiary	Any other transaction	Reimbursement Charges Paid	1.00	Approved			0.00	0.00	0.00										
+107	Cipla Limited	Jay Precision Products (India) Private Limited	Related party of a subsidiary	Purchase of fixed assets		95.00	Approved			16.96	0.00	0.00										
+108	Cipla Limited	Jay Precision Products (India) Private Limited	Related party of a subsidiary	Purchase of goods or services		5.00	Approved			1.65	0.00	0.00										
+109	Cipla Limited	Kemwell Biopharma Private Limited	Related party of a subsidiary	Any other transaction	Testing and Analysis Charges Paid	20.00	Approved			0.14	0.00	0.00										
+110	Cipla Limited	Medispray Laboratories Private Limited	Holding-Subsidiary	Any other transaction	Processing charges paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			32.85	0.00	0.00										
+111	Cipla Limited	Medispray Laboratories Private Limited	Holding-Subsidiary	Any other transaction	Processing charges received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.21	0.00	0.00										
+112	Cipla Limited	Medispray Laboratories Private Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.07	0.00	0.00										
+113	Cipla Limited	Medispray Laboratories Private Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.96	0.00	0.00										
+114	Cipla Limited	Medispray Laboratories Private Limited	Holding-Subsidiary	Purchase of fixed assets		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.00	0.00	0.00										
+115	Cipla Limited	Medispray Laboratories Private Limited	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			169.98	0.00	0.00										
+116	Cipla Limited	Medispray Laboratories Private Limited	Holding-Subsidiary	Sale of fixed assets		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.03	0.00	0.00										
+117	Cipla Limited	Medispray Laboratories Private Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			31.09	0.00	0.00										
+118	Cipla Limited	Meditab Specialities Limited	Holding-Subsidiary	Any other transaction	Processing charges paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			15.88	0.00	0.00										
+119	Cipla Limited	Meditab Specialities Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.00	0.00	0.00										
+120	Cipla Limited	Meditab Specialities Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.18	0.00	0.00										
+121	Cipla Limited	Meditab Specialities Limited	Holding-Subsidiary	Investment		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			121.98	0.00	0.00										
+122	Cipla Limited	Meditab Specialities Limited	Holding-Subsidiary	Purchase of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.60	0.00	0.00										
+123	Cipla Limited	Meditab Specialities Limited	Holding-Subsidiary	Sale of fixed assets		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.00	0.00	0.00										
+124	Cipla Limited	Meditab Specialities Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.18	0.00	0.00										
+125	Cipla Limited	Medpro Pharmaceutica (Pty) Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			2.32	0.00	0.00										
+126	Cipla Limited	Medpro Pharmaceutica (Pty) Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			311.32	0.00	0.00										
+127	Cipla Limited	Mexicip S.A. de C.V.	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.22	0.00	0.00										
+128	Cipla Limited	Mirren (Pty) Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+129	Cipla Limited	Mirren (Pty) Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.17	0.00	0.00										
+130	Cipla Limited	Sekhmet Technologies Private Limited	Private company in which a director is a member	Purchase of goods or services		5.00	Approved			0.54	0.00	0.00										
+131	Cipla Limited	Signet Excipients Private Limited	Related party of a subsidiary	Any other transaction	Freight charges paid	1.00	Approved			0.00	0.00	0.00										
+132	Cipla Limited	Signet Excipients Private Limited	Related party of a subsidiary	Purchase of goods or services		100.00	Approved	34.28	24-07-2025	34.28	0.00	0.00										
+133	Cipla Limited	Sitec Labs Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			2.55	0.00	0.00										
+134	Cipla Limited	Sitec Labs Limited	Holding-Subsidiary	Any other transaction	Reimbursement Charges Received	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			0.95	0.00	0.00										
+135	Cipla Limited	Sitec Labs Limited	Holding-Subsidiary	Any other transaction	Testing and Analysis Charges Paid	0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			71.11	0.00	0.00										
+136	Cipla Limited	Sitec Labs Limited	Holding-Subsidiary	Interest received		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.39	0.00	0.00										
+137	Cipla Limited	Sitec Labs Limited	Holding-Subsidiary	Loan		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			16.00	0.00	0.00										
+138	Cipla Limited	Sitec Labs Limited	Holding-Subsidiary	Sale of goods or services		0.00	Transaction with wholly owned subsidiary; Audit committee approval is not required as per applicable laws.			1.05	0.00	0.00										
+139	Cipla Limited	Stempeutics Research Private Limited	Associate	Any other transaction	Reimbursement Charges Paid	2.00	Approved			0.29	0.00	0.00										
+140	Cipla Limited	Stempeutics Research Private Limited	Associate	Purchase of goods or services		19.00	Approved			1.85	0.00	0.00										
+141	Cipla Limited	Veritas Legal	Firm in which director is a partner	Purchase of goods or services		4.00	Approved			1.50	0.00	0.00										
+142	Cipla Limited	Wellspring Healthcare Private Limited	Private company in which a director is a member	Purchase of goods or services		1.00	Approved			0.19	0.00	0.00										
+143	Cipla Limited	Achira Labs Private Limited	Associate	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	0.03	0.03										
+144	Cipla Limited	AMP Energy Green Eleven Private Limited	Associate	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	1.72	2.00										
+145	Cipla Limited	AMPIN Power Systems Private Limited	Associate	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	0.17	0.00										
+146	Cipla Limited	A S Kumar	Director of subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	1.09	0.49										
+147	Cipla Limited	Aspergen Inc.	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	4.80	4.61										
+148	Cipla Limited	Breathe Free Lanka (Private) Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	54.41	64.68										
+149	Cipla Limited	Cipla (China) Pharmaceutical Co., Ltd.	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	10.78	11.61										
+150	Cipla Limited	Cipla (EU) Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	58.85	59.24										
+151	Cipla Limited	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	(2.83)	1.00										
+152	Cipla Limited	Cipla Australia Pty Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	4.34	23.37										
+153	Cipla Limited	Cipla Brasil Importadora E Distribuidora De Medicamentos Ltda.	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	(0.67)	24.14										
+154	Cipla Limited	Cipla Colombia SAS	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	32.18	46.94										
+155	Cipla Limited	Cipla Digital Health Limited	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	10.62	3.62										
+156	Cipla Limited	Cipla Europe NV	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	48.95	106.91										
+157	Cipla Limited	Cipla Gulf FZ-LLC	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	4.67	10.76										
+158	Cipla Limited	Cipla Health Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	50.25	7.19										
+159	Cipla Limited	Cipla Holding B.V.	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	8.82	14.37										
+160	Cipla Limited	Cipla Kenya Limited	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	16.89	17.48										
+161	Cipla Limited	Cipla Limited Employees Gratuity Fund	Post Employment Benefit Trust	Any other transaction	Payable to Gratuity Trust	0.00	Not Applicable			0.00	9.82	6.84										
+162	Cipla Limited	Cipla Limited Employees Provident Fund	Post Employment Benefit Trust	Any other transaction	Payable to Provident Fund Trust	0.00	Not Applicable			0.00	15.64	17.39										
+163	Cipla Limited	Cipla Malaysia Sdn. Bhd.	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	3.37	3.94										
+164	Cipla Limited	Cipla Maroc SA	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	14.51	27.97										
+165	Cipla Limited	Cipla Medpro Manufacturing (Pty) Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	4.99	3.97										
+166	Cipla Limited	Cipla Medpro South Africa (Pty) Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	23.59	19.68										
+167	Cipla Limited	Cipla Medpro South Africa (Pty) Limited	Holding-Subsidiary	Loan		0.00	Not Applicable			0.00	564.90	616.50					Loan	0.00	0	Unsecured	Working Capital	Textual Information(1)
+168	Cipla Limited	Cipla Pharma and Life Sciences Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	67.61	86.35										
+169	Cipla Limited	Cipla Pharmaceuticals Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	(0.28)	0.08										
+170	Cipla Limited	CiplaRNA GmbH	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	0.00	3.32										
+171	Cipla Limited	Cipla Select (Pty) Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	29.24	39.68										
+172	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	1,434.59	2,095.12										
+173	Cipla Limited	Cipla USA Inc.	Holding-Subsidiary	Loan		0.00	Not Applicable			0.00	601.15	754.74					Loan	0.00	2	Unsecured	Working Capital	Textual Information(2)
+174	Cipla Limited	Clean Max Auriga Power LLP	Associate	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	0.11	0.29										
+175	Cipla Limited	Societe Marocaine De Cooperation Pharmaceutique (Cooper)	Related party of a subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	13.31	18.83										
+176	Cipla Limited	Exelan Pharmaceuticals Inc.	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	(17.56)	164.91										
+177	Cipla Limited	GoApptiv Private Limited	Associate	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	7.89	7.35										
+178	Cipla Limited	Goldencross Pharma Limited	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	14.26	27.32										
+179	Cipla Limited	ICaltech Innovations Private Limited	Associate	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	0.00	0.03										
+180	Cipla Limited	InvaGen Pharmaceuticals Inc.	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	41.15	14.71										
+181	Cipla Limited	Jay Precision Pharmaceuticals Private Limited	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not applicable			0.00	18.24	19.25										
+182	Cipla Limited	Jay Precision Products (India) Private Limited	Related party of a subsidiary	Any other transaction	Trade and Other receivable	0.00	Not applicable			0.00	6.37	3.18										
+183	Cipla Limited	Kamil Hamied	Non-executive Director	Any other transaction	Commission and Other Benefits payable	0.00	Not applicable			0.00	0.63	1.25										
+184	Cipla Limited	Kemwell Biopharma Pvt. Ltd.	Related party of a subsidiary	Any other transaction	Trade and Other receivable	0.00	Not applicable			0.00	(0.93)	0.00										
+185	Cipla Limited	Medispray Laboratories Private Limited	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	35.26	29.92										
+186	Cipla Limited	Meditab Specialities Limited	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	2.66	4.82										
+187	Cipla Limited	Medpro Pharmaceutica (Pty) Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	304.28	358.98										
+188	Cipla Limited	Mexicip S.A. de C.V.	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	5.66	6.12										
+189	Cipla Limited	Mirren (Pty) Limited	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	1.46	0.15										
+190	Cipla Limited	Sekhmet Technologies Private Limited	Private company in which a director is a member	Any other transaction	Trade and Other payable	0.00	Not applicable			0.00	0.21	0.53										
+191	Cipla Limited	Signet Excipients Private Limited	Related party of a subsidiary	Any other transaction	Trade and Other payable	0.00	Not applicable			0.00	15.72	14.22										
+192	Cipla Limited	Sitec Labs Limited	Holding-Subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	4.90	5.52										
+193	Cipla Limited	Sitec Labs Limited	Holding-Subsidiary	Loan		0.00	Not Applicable			0.00	26.00	42.00					Loan	0.00	5	Unsecured	Working Capital	Textual Information(3)
+194	Cipla Limited	Stempeutics Research Private Limited	Associate	Any other transaction	Trade and Other payable	0.00	Not applicable			0.00	1.15	0.77										
+195	Cipla Limited	Veritas Legal	Firm in which director is a partner	Any other transaction	Trade and Other payable	0.00	Not applicable			0.00	0.68	0.75										
+196	Cipla Limited	Wellspring Healthcare Private Limited	Private company in which a director is a member	Any other transaction	Trade and Other payable	0.00	Not applicable			0.00	0.05	0.06										
+197	Cipla Limited	Y K Hamied	Non-executive Chairman	Any other transaction	Commission and Other Benefits payable	0.00	Not applicable			0.00	1.53	1.25										
+198	Cipla Limited	Meditab Specialities Limited	Holding-Subsidiary	Any other transaction	Capital Advances	0.00	Not Applicable			0.00	55.74	0.00										
+199	Cipla Limited	Cipla Foundation	The entity over which the KMP or relatives of KMP are able to exercise significant influence/control	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	0.33	0.00										
+200	Cipla Limited	M K Hamied	Promoter	Any other transaction	Commission and Other Benefits payable	0.00	Not Applicable			0.00	0.89	0.00										
+201	Cipla Limited	Samina Hamied	Promoter Group	Any other transaction	Commission and Other Benefits payable	0.00	Not Applicable			0.00	0.89	0.00										
+202	Cipla Limited	Geena Malhotra	Director of subsidiary	Any other transaction	Trade and Other payable	0.00	Not Applicable			0.00	0.16	0.33										
+203	Cipla Limited	Kamil Hamied	Non-executive Director	Any other transaction	Sitting Fees/Commission and Other Benefits	1.30	Approved			1.30	0.00	0.00										
+204	Cipla Limited	Y K Hamied	Non-executive Chairman	Any other transaction	Sitting Fees/Commission and Other Benefits	1.28	Approved			1.28	0.00	0.00										
+205	Jay Precision Pharmaceuticals Private Limited	Cipla Foundation	Related Party of the listed entity	Any other transaction	CSR Contribution	1.00	Approved			0.54	0.00	0.00										
+206	Jay Precision Pharmaceuticals Private Limited	Jay Precision Products (India) Private Limited	Private company in which a director/relative is a member/director	Purchase of fixed assets		40.00	Approved			2.48	0.00	0.00										
+207	Jay Precision Pharmaceuticals Private Limited	Jay Precision Products (India) Private Limited	Private company in which a director/relative is a member/director	Any other transaction	Rent Received	1.00	Approved			0.08	0.00	0.00										
+208	Jay Precision Pharmaceuticals Private Limited	Jay Precision Products (India) Private Limited	Private company in which a director/relative is a member/director	Sale of goods or services		1.00	Approved			0.03	0.00	0.00										
+209	Jay Precision Pharmaceuticals Private Limited	Jay Precision Products (India) Private Limited	Private company in which a director/relative is a member/director	Purchase of goods or services		2.00	Approved			0.10	0.00	0.00										
+210	Jay Precision Pharmaceuticals Private Limited	Medispray Laboratories Private Limited	Subsidiaries	Sale of goods or services		45.00	Approved			4.43	0.00	0.00										
+211	Jay Precision Pharmaceuticals Private Limited	Cipla Maroc SA	Subsidiaries	Sale of goods or services		2.00	Approved			0.21	0.00	0.00										
+212	Meditab Specialities Limited	Medispray Laboratories Private Limited	Subsidiaries	Sale of fixed assets		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	0.00	0.00										
+213	Meditab Specialities Limited	Medispray Laboratories Private Limited	Subsidiaries	Investment		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			57.00	0.00	0.00										
+214	Meditab Specialities Limited	Cipla Foundation	Related Party of the listed entity	Any other transaction	CSR Contribution	0.00	Not Applicable			0.06	0.00	0.00										
+215	Meditab Specialities Limited	Sitec Labs Limited	Subsidiaries	Investment		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			64.98	0.00	0.00										
+216	Meditab Specialities Limited	Signet Excipients Private Limited	Related Party of a Subsidary	Purchase of goods or services		2.00	Approved			0.03	0.00	0.00										
+217	Meditab Specialities Limited	Meditab Specialities Limited Employees Comprehensive Gratuity Scheme	Post employment benefit trust	Any other transaction	Contribution to Gratuity Fund	0.00	Not Applicable			0.08	0.00	0.00										
+218	Meditab Specialities Limited	Meditab Specialities Limited Employees Comprehensive Gratuity Scheme	Post employment benefit trust	Any other transaction	Withdrawals from Gratuity Fund	0.00	Not Applicable			0.09	0.00	0.00										
+219	Medispray Laboratories Private Limited	Cipla Maroc SA	Subsidiaries	Sale of goods or services		33.00	Approved			11.18	0.00	0.00										
+220	Medispray Laboratories Private Limited	Meditab Specialities Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+221	Medispray Laboratories Private Limited	Meditab Specialities Limited	Subsidiaries	Any other transaction	Reimbursement Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.05	0.00	0.00										
+222	Medispray Laboratories Private Limited	Jay Precision Products (India) Private Limited	Related Party of a Subsidary	Purchase of goods or services		10.00	Approved			0.02	0.00	0.00										
+223	Medispray Laboratories Private Limited	Jay Precision Products (India) Private Limited	Related Party of a Subsidary	Sale of fixed assets		0.00	Not Applicable			0.06	0.00	0.00										
+224	Medispray Laboratories Private Limited	Signet Excipients Private Limited	Related Party of a Subsidary	Purchase of goods or services		5.00	Approved			1.12	0.00	0.00										
+225	Medispray Laboratories Private Limited	Cipla Foundation	Related Party of the listed entity	Any other transaction	CSR Contribution	0.00	Not Applicable			0.39	0.00	0.00										
+226	Medispray Laboratories Private Limited	Medispray Laboratories Private Limited Employees Comprehensive Gratuity Scheme	Post employment benefit trust	Any other transaction	Contribution to Gratuity Fund	0.00	Not Applicable			0.00	0.00	0.00										
+227	Medispray Laboratories Private Limited	Medispray Laboratories Private Limited Employees Comprehensive Gratuity Scheme	Post employment benefit trust	Any other transaction	Withdrawals from Gratuity Fund	0.00	Not Applicable			0.08	0.00	0.00										
+228	Sitec Labs Limited	Cipla USA Inc.	Subsidiaries	Any other transaction	Testing and Analysis Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.02	0.00	0.00										
+229	Sitec Labs Limited	Medispray Laboratories Private Limited	Subsidiaries	Any other transaction	Testing and Analysis Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.04	0.00	0.00										
+230	Sitec Labs Limited	Meditab Specialities Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	0.00	0.00										
+231	Sitec Labs Limited	InvaGen Pharmaceuticals Inc.	Subsidiaries	Any other transaction	Testing and Analysis Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.09	0.00	0.00										
+232	Sitec Labs Limited	Cipla Foundation	Related Party of the listed entity	Any other transaction	CSR Contribution	0.00	Not Applicable			0.20	0.00	0.00										
+233	Sitec Labs Limited	Sitec Labs Private Limited Employees Comprehensive Gratuity Scheme	Post employment benefit trust	Any other transaction	Withdrawals from Gratuity Fund	0.00	Not Applicable			0.10	0.00	0.00										
+234	Cipla Health Limited	Signet Excipients Private Limited	Private company in which director of the subsidiary is a director	Purchase of goods or services		12.00	Approved			4.05	0.00	0.00										
+235	Cipla Health Limited	Cipla Pharma and Life Sciences Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+236	Cipla Health Limited	Boston Ivy Healthcare Solutions Private Limited (Medikabazaar)	Private Company in which a director is a member	Sale of goods or services		1.00	Approved			0.07	0.00	0.00										
+237	Cipla Health Limited	Cipla Foundation	Related Party of the listed entity	Any other transaction	CSR Contribution	0.00	Not Applicable			0.76	0.00	0.00										
+238	Cipla Pharma and Life Sciences Limited	Cipla Foundation	Related Party of the listed entity	Any other transaction	CSR Contribution	0.00	Not Applicable			0.09	0.00	0.00										
+239	Cipla Pharma and Life Sciences Limited	Cipla Pharma and Life Sciences Limited Employees Gratuity Fund	Post Employment Benefit Trust	Any other transaction	Contribution to Gratuity Fund	0.00	Not Applicable			0.45	0.00	0.00										
+240	Cipla Pharma and Life Sciences Limited	GoApptiv Private Limited	Associate of listed entity	Purchase of goods or services		2.00	Approved			1.17	0.00	0.00										
+241	Actor Pharma (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			1.73	0.00	0.00										
+242	Actor Pharma (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			25.64	0.00	0.00										
+243	Cipla-Medpro Distribution Centre (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Any other transaction	Distribution fee income	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			41.68	0.00	0.00										
+244	Cipla Medpro Manufacturing (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Sale of goods or services		600.00	Approved			211.62	0.00	0.00										
+245	Cipla Medpro Manufacturing (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Sale of goods or services		20.00	Approved			7.59	0.00	0.00										
+246	Cipla Medpro Manufacturing (Pty) Limited	The Cipla Foundation, South Africa	Entities over which the company is able to exercise significant influence/Control	Any other transaction	Donation paid	5.00	Approved			3.22	0.00	0.00										
+247	Cipla Medpro South Africa (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Any other transaction	Reimbursement charges received	20.00	Approved			0.03	0.00	0.00										
+248	Cipla Medpro South Africa (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Any other transaction	Royalty Income	50.00	Approved			17.51	0.00	0.00										
+249	Cipla Medpro South Africa (Pty) Limited	Brandmed (Pty) Limited	Associate	Interest received		0.00	Not Applicable			0.95	0.00	0.00										
+250	Cipla Medpro South Africa (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Any other transaction	Interest Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			20.95	0.00	0.00										
+251	Cipla Select (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.33	0.00	0.00										
+252	Cipla-Medpro (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Any other transaction	Royalty Income	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			11.48	0.00	0.00										
+253	Cipla-Medpro (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Any other transaction	Royalty Income	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.96	0.00	0.00										
+254	Medpro Pharmaceutica (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			5.52	0.00	0.00										
+255	Medpro Pharmaceutica (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Sale of goods or services		15.00	Approved			1.32	0.00	0.00										
+256	Medpro Pharmaceutica (Pty) Limited	Cipla-Medpro Distribution Centre (Pty) Limited	Subsidiaries	Any other transaction	Reimbursement charges received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			2.27	0.00	0.00										
+257	Medpro Pharmaceutica (Pty) Limited	The Cipla Foundation, South Africa	Entities over which the company is able to exercise significant influence/Control	Any other transaction	Reimbursement charges received	20.00	Approved			0.09	0.00	0.00										
+258	Medpro Pharmaceutica (Pty) Limited	The Cipla Foundation, South Africa	Entities over which the company is able to exercise significant influence/Control	Any other transaction	Donation paid	15.00	Approved			3.51	0.00	0.00										
+259	Medpro Pharmaceutica (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Any other transaction	Reimbursement charges received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			2.81	0.00	0.00										
+260	Medpro Pharmaceutica (Pty) Limited	Cipla Medpro South Africa (Pty) Limited	Subsidiaries	Any other transaction	Reimbursement charges received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			3.18	0.00	0.00										
+261	Medpro Pharmaceutica (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Any other transaction	Reimbursement charges received	50.00	Approved			23.89	0.00	0.00										
+262	Medpro Pharmaceutica (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Any other transaction	Reimbursement charges paid	80.00	Approved			41.94	0.00	0.00										
+263	Medpro Pharmaceutica (Pty) Limited	Mirren (Pty) Limited	Subsidiaries	Any other transaction	Reimbursement charges received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.48	0.00	0.00										
+264	Medpro Pharmaceutica (Pty) Limited	Cipla Kenya Limited	Subsidiaries	Any other transaction	Reimbursement charges received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.01	0.00	0.00										
+265	Medpro Pharmaceutica (Pty) Limited	Cipla-Medpro (Pty) Limited	Subsidiaries	Any other transaction	Reimbursement charges received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			4.19	0.00	0.00										
+266	Mirren (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			49.18	0.00	0.00										
+267	Mirren (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Sale of goods or services		1.00	Approved			0.30	0.00	0.00										
+268	Meditab Holdings Limited	Cipla Kenya Limited	Subsidiaries	Interest received		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.65	0.00	0.00										
+269	Cipla USA Inc.	InvaGen Pharmaceuticals Inc.	Subsidiaries	Any other transaction	Reimbursement Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			2.31	0.00	0.00										
+270	Cipla USA Inc.	Exelan Pharmaceuticals Inc.	Subsidiaries	Any other transaction	Reimbursement Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.16	0.00	0.00										
+271	Cipla USA Inc.	Aspergen Inc.	Subsidiaries	Sale of goods or services		50.00	Approved			0.27	0.00	0.00										
+272	Cipla USA Inc.	Cipla Therapeutics Inc.	Subsidiaries	Any other transaction	Reimbursement Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			1.56	0.00	0.00										
+273	InvaGen Pharmaceuticals Inc.	Cipla USA Inc.	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			208.43	0.00	0.00										
+274	Aspergen Inc.	Kemwell Biopharma Private Limited	Private company in which a director/relative is a member/director	Purchase of goods or services		150.00	Approved			8.56	0.00	0.00										
+275	InvaGen Pharmaceuticals Inc.	Cipla USA Inc.	Subsidiaries	Any other transaction	Reimbursement Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			55.24	0.00	0.00										
+276	Jay Precision Pharmaceuticals Private Limited	Jay Precision Pharmaceuticals Employees Group Gratuity Trust	Post employment benefit trust	Any other transaction	Payable to Gratuity Trust	0.00	Not Applicable			0.00	0.08	0.19										
+277	InvaGen Pharmaceuticals Inc.	Exelan Pharmaceuticals Inc.	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			174.80	0.00	0.00										
+278	InvaGen Pharmaceuticals Inc.	Exelan Pharmaceuticals Inc.	Subsidiaries	Any other transaction	Reimbursement Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			8.92	0.00	0.00										
+279	Cipla Limited	Y K HAMIED	Non-executive Chairman	Any other transaction	Rent Received	0.00	Approved			0.00	0.00	0.00										
+280	Aspergen Inc.	Kemwell Biopharma Private Limited	Private company in which a director/relative is a member/director	Any other transaction	Reimbursement Charges paid	30.00	Approved			15.73	0.00	0.00										
+281	Cipla (EU) Limited	Aspergen Inc.	Subsidiaries	Investment		53.28	Approved			32.41	0.00	0.00										
+282	Aspergen Inc.	Kemwell Biopharma UK Limited	Investing Company	Any other transaction	Capital Infusion	0.00	Not Applicable			21.61	0.00	0.00										
+283	Cipla Maroc SA	Societe Marocaine De Cooperation Pharmaceutique (Cooper)	Investing Company	Purchase of goods or services		40.00	Approved			5.21	0.00	0.00										
+284	Cipla Maroc SA	Societe Marocaine De Cooperation Pharmaceutique (Cooper)	Investing Company	Sale of goods or services		255.00	Approved			122.34	0.00	0.00										
+285	Cipla (EU) Limited	Cipla Australia Pty Limited	Subsidiaries	Any other transaction	Repayment of loan received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			11.32	0.00	0.00										
+286	Cipla Europe NV	Cipla (EU) Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.35	0.00	0.00										
+287	Cipla Holding B.V.	Cipla (EU) Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			3.52	0.00	0.00										
+288	Cipla Holding B.V.	Cipla Europe NV	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			3.86	0.00	0.00										
+289	Cipla Gulf FZ-LLC	Cipla Australia Pty Limited	Subsidiaries	Any other transaction	Reimbursement received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			1.06	0.00	0.00										
+290	Cipla Gulf FZ-LLC	Cipla Brasil Importadora E Distribuidora De Medicamentos Ltda.	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			4.31	0.00	0.00										
+291	Cipla Gulf FZ-LLC	Cipla Brasil Importadora E Distribuidora De Medicamentos Ltda.	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.17	0.00	0.00										
+292	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Cipla (EU) Limited	Subsidiaries	Any other transaction	Loan Repaid	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			36.45	0.00	0.00										
+293	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Cipla USA Inc.	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			59.26	0.00	0.00										
+294	Cipla (China) Pharmaceutical Co., Ltd.	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Subsidiaries	Any other transaction	Reimbursement Charges Received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			1.05	0.00	0.00										
+295	Cipla (China) Pharmaceutical Co., Ltd.	Shanghai Sage Business Consulting Co Ltd	Entity related to KMP	Any other transaction	Professional Fees Paid	5.00	Approved			1.46	0.00	0.00										
+296	Cipla (EU) Limited	Cipla Europe NV	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			2.65	0.00	0.00										
+297	Cipla (EU) Limited	Cipla Gulf FZ-LLC	Subsidiaries	Interest received		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.48	0.00	0.00										
+298	Cipla (EU) Limited	Cipla Australia Pty Limited	Subsidiaries	Interest received		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.28	0.00	0.00										
+299	Cipla (EU) Limited	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Subsidiaries	Interest received		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			3.67	0.00	0.00										
+300	Cipla (EU) Limited	Mexicip S.A. de C.V.	Subsidiaries	Interest received		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.21	0.00	0.00										
+301	Cipla (EU) Limited	MKC Biotherapeutics Inc.	Associate	Investment		8.92	Approved			8.92	0.00	0.00										
+302	CiplaRna GmbH	Cipla (EU) Limited	Subsidiaries	Any other transaction	Capital Infusion	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			3.71	0.00	0.00										
+303	Goldencross Pharma Limited	Cipla Health Limited	Subsidiaries	Sale of goods or services		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			5.89	0.00	0.00										
+304	Goldencross Pharma Limited	Jay Precision Pharmaceuticals Private Limited	Subsidiaries	Sale of fixed assets		2.00	Approved			0.24	0.00	0.00										
+305	Goldencross Pharma Limited	Cipla Foundation	Related Party of the listed entity	Any other transaction	CSR Contribution	0.00	Not Applicable			0.24	0.00	0.00										
+306	Goldencross Pharma Limited	Goldencross Pharma Limited Employees Group Gratuity Fund	Post Employment Benefit Trust	Any other transaction	Withdrawals from Gratuity Fund	0.00	Not Applicable			0.11	0.00	0.00										
+307	Cipla Digital Health Limited	Cipla Digital Health Limited Gratuity Trust	Post Employment Benefit Trust	Any other transaction	Contribution to Gratuity Fund	0.00	Not Applicable			0.15	0.00	0.00										
+308	Cipla Europe NV	CiplaRna GmbH	Subsidiaries	Any other transaction	Reimbursement received	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			1.63	0.00	0.00										
+309	Cipla Digital Health Limited	Cipla Digital Health Limited Gratuity Trust	Post employment benefit trust	Any other transaction	Payable to Gratuity Trust	0.00	Not Applicable			0.00	0.00	0.15										
+310	Jay Precision Pharmaceuticals Private Limited	Jay Precision Products (India) Private Limited	Private company in which a director/relative is a member/director	Any other transaction	Capital Advance	0.00	Not Applicable			0.00	5.85	4.32										
+311	Jay Precision Pharmaceuticals Private Limited	Jay Precision Products (India) Private Limited	Private company in which a director/relative is a member/director	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.33	0.01										
+312	Jay Precision Pharmaceuticals Private Limited	Medispray Laboratories Private Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	1.08	1.41										
+313	Jay Precision Pharmaceuticals Private Limited	Cipla Maroc SA	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	0.21										
+314	Meditab Specialities Limited	Signet Excipients Private Limited	Related Party of a Subsidary	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	0.00	0.03										
+315	Meditab Specialities Limited	Meditab Specialities Limited Employees Comprehensive Gratuity Scheme	Post employment benefit trust	Any other transaction	Payable to Gratuity Trust	0.00	Not Applicable			0.00	2.07	2.47										
+316	Medispray Laboratories Private Limited	Cipla Maroc SA	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	12.97	15.91										
+317	Medispray Laboratories Private Limited	Meditab Specialities Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	(0.03)	0.01										
+318	Medispray Laboratories Private Limited	Jay Precision Products (India) Private Limited	Related Party of a Subsidary	Any other transaction	Advance given	0.00	Not Applicable			0.00	3.51	0.00										
+319	Medispray Laboratories Private Limited	Jay Precision Products (India) Private Limited	Related Party of a Subsidary	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	0.00	0.13										
+320	Medispray Laboratories Private Limited	Signet Excipients Private Limited	Related Party of a Subsidary	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	0.00	0.49										
+321	Medispray Laboratories Private Limited	Medispray Laboratories Private Limited Employees Comprehensive Gratuity Scheme	Post employment benefit trust	Any other transaction	Payable to Gratuity Trust	0.00	Not Applicable			0.00	9.39	10.91										
+322	Goldencross Pharma Limited	Cipla Health Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.96	0.95										
+323	Goldencross Pharma Limited	Jay Precision Pharmaceuticals Private Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	0.28										
+324	Goldencross Pharma Limited	Signet Excipients Private Limited	Related Party of a Subsidary	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	2.21	0.00										
+325	Goldencross Pharma Limited	Goldencross Pharma Limited Employees Group Gratuity Fund	Post employment benefit trust	Any other transaction	Payable to Gratuity Trust	0.00	Not Applicable			0.00	2.99	3.53										
+326	Sitec Labs Limited	Cipla USA Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.03	0.06										
+327	Sitec Labs Limited	Medispray Laboratories Private Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.08	0.05										
+328	Sitec Labs Limited	Meditab Specialities Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	0.00										
+329	Sitec Labs Limited	Cipla Health Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	0.00										
+330	Sitec Labs Limited	Invagen Pharmaceuticals Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.27	0.36										
+331	Sitec Labs Limited	Sitec Labs Private Limited Employees Comprehensive Gratuity Scheme	Post employment benefit trust	Any other transaction	Payable to Gratuity Trust	0.00	Not Applicable			0.00	5.79	7.07										
+332	Cipla Health Limited	Signet Excipients Private Limited	Private company in which director of the subsidiary is a director	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	0.89	2.90										
+333	Cipla Health Limited	Cipla Pharma and Life Sciences Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	3.31	1.69										
+334	Cipla Health Limited	Cipla Health Limited Employees Gratuity Scheme	Post Employment Benefit Trust	Any other transaction	Payable to Gratuity Trust	0.00	Not Applicable			0.00	0.08	1.46										
+335	Cipla Pharma and Life Sciences Limited	GoApptiv Private Limited	Associate of listed entity	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	(0.12)	1.56										
+336	Cipla Pharma and Life Sciences Limited	Cipla Pharma and Life Sciences Limited Employees Gratuity Fund	Post Employment Benefit Trust	Any other transaction	Payable to Gratuity Trust	0.00	Not Applicable			0.00	1.72	2.11										
+337	Actor Pharma (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	25.39	23.61										
+338	Actor Pharma (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	14.33	22.04										
+339	Cipla-Medpro Distribution Centre (Pty) Limited	Cipla Kenya Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.25	0.27										
+340	Cipla Medpro Manufacturing (Pty) Limited	Cipla Empowerment Trust	Entities over which the company is able to exercise significant influence/Control	Any other transaction	Advance	0.00	Not Applicable			0.00	0.00	0.00										
+341	Cipla Medpro Manufacturing (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	287.78	315.27										
+342	Cipla Medpro Manufacturing (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	7.21	4.69										
+343	Cipla Medpro South Africa (Pty) Limited	Brandmed (Pty) Limited	Associate	Loan		0.00	Not Applicable			0.00	20.16	23.01					Loan	0.00	0	Unsecured	Working Capital	Textual Information(4)
+344	Cipla Medpro South Africa (Pty) Limited	Cipla-Medpro (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	2.02	2.21										
+345	Cipla Medpro South Africa (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	40.21	13.22										
+346	Cipla Medpro South Africa (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Loan		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	367.19	400.73					Loan	0.00	0	Unsecured	Working Capital	Textual Information(5)
+347	Cipla Select (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.20	0.03										
+348	Cipla-Medpro (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	5.15	2.69										
+349	Medpro Pharmaceutica (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	311.89	176.10										
+350	Medpro Pharmaceutica (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	1.62										
+351	Medpro Pharmaceutica (Pty) Limited	Cipla Medpro South Africa (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	330.66	243.82										
+352	Medpro Pharmaceutica (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.42	0.70										
+353	Medpro Pharmaceutica (Pty) Limited	Cipla Select (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Payables	0.00	Not Applicable			0.00	16.22	34.91										
+354	Medpro Pharmaceutica (Pty) Limited	The Cipla Foundation, South Africa	Entities over which the company is able to exercise significant influence/Control	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.64	0.00										
+355	Medpro Pharmaceutica (Pty) Limited	Cipla Kenya Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	26.19	28.60										
+356	Medpro Pharmaceutica (Pty) Limited	Cipla-Medpro Distribution Centre (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Payables	0.00	Not Applicable			0.00	9.68	10.09										
+357	Medpro Pharmaceutica (Pty) Limited	Cipla-Medpro (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	(0.13)	1.22										
+358	Medpro Pharmaceutica (Pty) Limited	Mirren (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	51.94	57.19										
+359	Mirren (Pty) Limited	Cipla Medpro Manufacturing (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	1.04										
+360	Mirren (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	18.90	15.64										
+361	Cipla Medpro Botswana (Pty) Limited	Medpro Pharmaceutica (Pty) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	0.00										
+362	Cipla USA Inc.	InvaGen Pharmaceuticals Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	93.67	0.00										
+363	Cipla USA Inc.	Exelan Pharmaceuticals Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	0.01										
+364	Cipla USA Inc.	Aspergen Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.68	0.42										
+365	Cipla USA Inc.	Cipla Therapeutics Inc	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.23	1.48										
+366	InvaGen Pharmaceuticals Inc.	Cipla USA Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	107.03										
+367	InvaGen Pharmaceuticals Inc.	Exelan Pharmaceuticals Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	39.35										
+368	Exelan Pharmaceuticals Inc.	Cipla USA Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.25	0.00										
+369	Exelan Pharmaceuticals Inc.	InvaGen Pharmaceuticals Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	87.47	0.00										
+370	Aspergen Inc.	Kemwell Biopharma Private Limited	Private company in which a director/relative is a member/director	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	28.10	27.66										
+371	Cipla Maroc SA	Societe Marocaine De Cooperation Pharmaceutique (Cooper)	Investing Company	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	44.32	70.69										
+372	Meditab Holdings Limited	Cipla Kenya Limited	Subsidiaries	Loan		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	22.52	24.00					Loan	6.00	0	Unsecured	Working Capital	Textual Information(6)
+373	Cipla Maroc SA	Societe Marocaine De Cooperation Pharmaceutique (Cooper)	Investing Company	Any other transaction	Interest Payable	0.00	Not Applicable			0.00	0.59	0.64										
+374	Cipla Australia Pty Limited	Cipla Gulf FZ-LLC	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	8.89	8.59										
+375	Cipla Medpro Manufacturing (Pty) Limited	Signet Excipients Private Limited	Related Party of a Subsidary	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	0.60	0.03										
+376	Cipla Europe NV	CiplaRNA GmbH	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	1.79										
+377	Cipla (EU) Limited	Cipla Europe NV	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	21.94	26.03										
+378	Cipla (EU) Limited	Cipla Gulf FZ-LLC	Subsidiaries	Loan		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	17.10	17.76					Loan	5.50	5	Unsecured	Working Capital	
+379	Cipla (EU) Limited	Cipla Australia Pty Limited	Subsidiaries	Any other transaction	Interest receivable	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	0.29	0.61										
+380	Cipla (EU) Limited	Cipla Australia Pty Limited	Subsidiaries	Loan		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	24.57	15.06					Loan	2.80	0	Unsecured	Working Capital	Textual Information(7)
+381	Cipla (EU) Limited	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Subsidiaries	Loan		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	141.89	110.99					Loan	0.00	1	Unsecured	Working Capital	Textual Information(8)
+382	Cipla (EU) Limited	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Subsidiaries	Any other transaction	Interest receivable	0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	15.22	19.59										
+383	Cipla (EU) Limited	Mexicip S.A. de C.V.	Subsidiaries	Loan		0.00	Transaction between wholly owned subsidiaries; Audit committee approval is not required as per applicable laws.			0.00	5.56	5.77					Loan	8.00	2	Unsecured	Working Capital	
+384	Cipla (EU) Limited	Cipla Maroc SA	Subsidiaries	Any other transaction	Dividend Receivable	0.00	Not Applicable			0.00	35.71	16.31										
+385	Cipla (EU) Limited	CiplaRna GmbH	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.00	0.12										
+386	Cipla Holding B.V.	Cipla (EU) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	13.23	11.09										
+387	Cipla Holding B.V.	Cipla Europe NV	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	9.18	9.85										
+388	Cipla Gulf FZ â€“ LLC	Cipla Brasil Importadora E Distribuidora De Medicamentos Ltda.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	5.08	11.47										
+389	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Cipla (EU) Limited	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.22	0.23										
+390	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Cipla USA Inc.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	67.69	52.21										
+391	Cipla (China) Pharmaceutical Co., Ltd	Cipla (Jiangsu) Pharmaceutical Co., Ltd.	Subsidiaries	Any other transaction	Trade and Other Receivables	0.00	Not Applicable			0.00	0.52	1.09										
+392	Cipla (China) Pharmaceutical Co., Ltd	Shanghai Sage Business Consulting Co Ltd	Entity related to KMP	Any other transaction	Trade and Other Payable	0.00	Not Applicable			0.00	0.00	0.57										
+393	Cipla Medpro Manufacturing (Pty) Limited	Signet Excipients Private Limited	Related Party of a Subsidary	Purchase of goods or services		15.00	Approved			5.15	0.00	0.00										
+394	Cipla Limited	Cipla Therapeutics Inc.	Holding-Subsidiary	Any other transaction	Trade and Other receivable	0.00	Not Applicable			0.00	0.02	0.00										
+Total value of transaction during the reporting period	6,721.59	
+
+Text Block
+Textual Information(1)	Interest Rate: 250 bps higher than 3 months JIBAR rate capped at the prime lending rate in South Africa Tenure : Repayment starts with 31st March 2028 to Oct 2029
+Textual Information(2)	Interest Rate: Term SOFR + 150 bps
+Textual Information(3)	Interest Rate: 6.5%-7.5%
+Textual Information(4)	Interest Rate: South African prime rate less 1.75% Tenure: Repayment to start from 31 March 2025 to 31 March 2028
+Textual Information(5)	Interest Rate: 250 bps higher than 3 months JIBAR rate capped at the prime lending rate in South Africa Tenure: Repayament starts with 31 March 2026 to Oct 2029
+Textual Information(6)	Tenure: Repayable on Demand
+Textual Information(7)	Tenure: 4 to 6
+Textual Information(8)	Interest Rate: 4% - 6%
+Objects for which funds have been raised and where there has been a deviation, in the following table:
+Sr.	Original Object	Modified Object, if any	Original Allocation	Modified allocation, if any	Funds Utilised	Amount of Deviation/Variation for the quarter according to applicable object	Remarks if any
+No records available

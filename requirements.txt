@@ -1,0 +1,11 @@
+selenium
+pyautogui
+pyperclip
+pandas
+plotly
+tqdm
+python-dotenv
+google-generativeai
+fastapi
+uvicorn
+requests
