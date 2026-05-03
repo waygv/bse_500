@@ -1,103 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>BSE 500 Dashboard</title>
-  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 16px; background: #f7f9fb; }
-    h1 { margin-top: 0; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .card { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
-    button { padding: 8px 12px; border: none; background: #2563eb; color: #fff; border-radius: 6px; cursor: pointer; }
-    button:hover { background: #1d4ed8; }
-    input { padding: 8px; border: 1px solid #d1d5db; border-radius: 6px; }
-    #analysis { white-space: pre-wrap; background: #0f172a; color: #e2e8f0; padding: 12px; border-radius: 8px; min-height: 200px; }
-    #status { margin-top: 6px; color: #475569; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSE TradingAgents Terminal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+        body { font-family: 'JetBrains+Mono', monospace; background-color: #0d1117; color: #e6edf3; }
+        .terminal-glow { box-shadow: 0 0 15px rgba(0, 255, 127, 0.1); }
+        .agent-card { border: 1px solid #30363d; background-color: #161b22; transition: all 0.3s ease; }
+        .agent-card:hover { border-color: #00ff7f; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .animate-fade-in { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .tab-btn { font-size: 0.875rem; font-weight: 700; padding: 0.25rem 0.5rem; transition: all 0.2s; border-bottom: 2px solid transparent; color: #8b949e; }
+        .tab-btn.active { border-color: #00ff7f; color: #ffffff; }
+    </style>
 </head>
-<body>
-  <h1>BSE 500 Market Dashboard</h1>
-  <div class="controls">
-    <input id="companyInput" placeholder="Company (default CIPLA)" />
-    <button id="runBtn">Run Scrapers</button>
-    <button id="analysisBtn">LLM Analysis</button>
-    <span id="status"></span>
-  </div>
+<body class="p-4 md:p-8">
+    <!-- Top Nav / Search -->
+    <header class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center font-bold text-black text-xl">B</div>
+            <h1 class="text-2xl font-bold tracking-tighter">TRADING<span class="text-green-500">AGENTS</span> TERMINAL</h1>
+        </div>
+        
+        <div class="relative w-full max-w-xl">
+            <div class="flex gap-2">
+                <input type="text" id="ticker-search" placeholder="Search Ticker (e.g. RELIANCE.NS)..." 
+                       class="w-full bg-[#161b22] border border-[#30363d] rounded-full py-3 px-6 focus:outline-none focus:border-green-500 transition-all">
+                <button onclick="triggerManualSearch()" class="bg-green-500 text-black px-6 rounded-full font-bold hover:bg-green-400 transition-colors">ANALYZE</button>
+            </div>
+            <div id="search-results" class="absolute top-full left-0 right-0 bg-[#161b22] border border-[#30363d] rounded-xl mt-2 hidden z-50 overflow-hidden shadow-2xl text-sm">
+                <!-- Autocomplete results here -->
+            </div>
+        </div>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Index Heatmap</h3>
-      <div id="indexChart"></div>
-    </div>
-    <div class="card">
-      <h3>Market Heatmap (click a company node for LLM analysis)</h3>
-      <div id="marketChart"></div>
-    </div>
-  </div>
+        <div class="flex gap-4">
+            <button id="btn-dash" onclick="showView('dashboard')" class="tab-btn active">DASHBOARD</button>
+            <button id="btn-arena" onclick="showView('arena')" class="tab-btn">AGENT ARENA</button>
+            <button id="btn-reports" onclick="showView('reports')" class="tab-btn">COMPANY REPORTS</button>
+        </div>
+    </header>
 
-  <div class="card" style="margin-top:16px;">
-    <h3>LLM Company Analysis</h3>
-    <div id="analysis">Click a node on the Market heatmap or use the button above.</div>
-  </div>
+    <!-- Views -->
+    <main>
+        <!-- Dashboard View -->
+        <section id="view-dashboard" class="space-y-8 animate-fade-in">
+            <div id="heatmap-error" class="hidden p-4 bg-red-500/10 border border-red-500 text-red-500 rounded-xl text-center">
+                Market data is being initialized. Please wait a few moments and refresh.
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-[#161b22] rounded-2xl p-6 border border-[#30363d]">
+                    <div id="index-heatmap" class="w-full h-[500px] flex items-center justify-center italic text-gray-500">Loading Index Heatmap...</div>
+                </div>
+                <div class="bg-[#161b22] rounded-2xl p-6 border border-[#30363d]">
+                    <div id="market-heatmap" class="w-full h-[500px] flex items-center justify-center italic text-gray-500">Loading Market Heatmap...</div>
+                </div>
+            </div>
+        </section>
 
-  <script>
-    const statusEl = document.getElementById('status');
-    const analysisEl = document.getElementById('analysis');
-    const companyInput = document.getElementById('companyInput');
+        <!-- Agent Arena View -->
+        <section id="view-arena" class="hidden space-y-6 animate-fade-in">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-bold">LIVE ANALYSIS: <span id="current-ticker" class="text-green-500">NONE</span></h2>
+                <div id="stream-status" class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-400 uppercase tracking-widest">IDLE</div>
+            </div>
 
-    async function loadHeatmaps() {
-      statusEl.textContent = 'Loading heatmaps...';
-      try {
-        const res = await fetch('/api/heatmap');
-        const data = await res.json();
-        Plotly.react('indexChart', data.index_fig.data, data.index_fig.layout);
-        Plotly.react('marketChart', data.market_fig.data, data.market_fig.layout);
-        statusEl.textContent = 'Heatmaps loaded. Click a market node for analysis.';
-      } catch (err) {
-        console.error(err);
-        statusEl.textContent = 'Failed to load heatmaps.';
-      }
-    }
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[700px]">
+                <div class="lg:col-span-1 flex flex-col gap-4 overflow-y-auto pr-2 scrollbar-hide">
+                    <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider">Agent Thought Logs</h3>
+                    <div id="analyst-reports" class="space-y-4"></div>
+                </div>
 
-    async function runScrapers() {
-      statusEl.textContent = 'Starting scrapers...';
-      const company = companyInput.value.trim();
-      const body = new URLSearchParams();
-      if (company) body.append('company', company);
-      const res = await fetch('/api/run-scrapers?' + body.toString(), { method: 'POST' });
-      const data = await res.json();
-      statusEl.textContent = `Scrapers started (runId=${data.runId}). Refresh heatmap after completion.`;
-    }
+                <div class="lg:col-span-1 flex flex-col gap-4 bg-[#0d1117] rounded-xl border border-[#30363d] p-4 overflow-y-auto scrollbar-hide relative">
+                    <h3 class="text-xs font-bold text-gray-500 sticky top-0 bg-[#0d1117] py-1 uppercase tracking-wider">Dialectical Debate</h3>
+                    <div id="debate-history" class="space-y-6 text-sm"></div>
+                </div>
 
-    async function fetchAnalysis(company) {
-      if (!company) return;
-      statusEl.textContent = `Running LLM analysis for ${company}...`;
-      analysisEl.textContent = 'Loading...';
-      const res = await fetch(`/api/analysis?company=${encodeURIComponent(company)}`);
-      const data = await res.json();
-      if (data.analysis) {
-        analysisEl.textContent = JSON.stringify(data.analysis, null, 2);
-        statusEl.textContent = `Analysis ready for ${company}.`;
-      } else {
-        analysisEl.textContent = JSON.stringify(data, null, 2);
-        statusEl.textContent = 'Analysis response received.';
-      }
-    }
+                <div class="lg:col-span-1 flex flex-col gap-4">
+                    <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider">Final Executive Decision</h3>
+                    <div id="decision-output" class="bg-green-500/5 border border-green-500/20 rounded-xl p-6 h-full overflow-y-auto whitespace-pre-wrap leading-relaxed text-sm">
+                        <span class="text-gray-500 italic">Initiate a search to start the agentic workflow.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    document.getElementById('runBtn').onclick = runScrapers;
-    document.getElementById('analysisBtn').onclick = () => fetchAnalysis(companyInput.value || 'CIPLA');
+        <!-- Company Reports View -->
+        <section id="view-reports" class="hidden space-y-8 animate-fade-in">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-bold text-green-500 uppercase tracking-tighter">Deep Dive Analysis</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- XBRL Section -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-1 h-6 bg-blue-500"></div>
+                        <h3 class="text-lg font-bold">XBRL Financial Summary</h3>
+                    </div>
+                    <div id="report-xbrl" class="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 min-h-[400px] text-sm leading-relaxed whitespace-pre-wrap">
+                        <span class="text-gray-600 italic">No XBRL data parsed yet. Run analysis for a company to populate this section.</span>
+                    </div>
+                </div>
 
-    document.getElementById('marketChart').on('plotly_click', (e) => {
-      const label = e.points?.[0]?.label || e.points?.[0]?.id || e.points?.[0]?.text;
-      if (label) {
-        companyInput.value = label;
-        fetchAnalysis(label);
-      }
-    });
+                <!-- Operations/Exporters Section -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-1 h-6 bg-orange-500"></div>
+                        <h3 class="text-lg font-bold">Trade & Export Footprint</h3>
+                    </div>
+                    <div id="report-ops" class="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 min-h-[400px] text-sm leading-relaxed whitespace-pre-wrap">
+                        <span class="text-gray-600 italic">No supply chain data parsed yet. Run analysis for a company to populate this section.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    loadHeatmaps();
-  </script>
+    <script>
+        const searchInput = document.getElementById('ticker-search');
+        const resultsDiv = document.getElementById('search-results');
+        let socket = null;
+
+        // --- View Navigation ---
+        function showView(viewId) {
+            const views = ['dashboard', 'arena', 'reports'];
+            views.forEach(v => {
+                document.getElementById(`view-${v}`).classList.add('hidden');
+                document.getElementById(`btn-${v === 'dashboard' ? 'dash' : v}`).classList.remove('active');
+            });
+            document.getElementById(`view-${viewId}`).classList.remove('hidden');
+            document.getElementById(`btn-${viewId === 'dashboard' ? 'dash' : viewId}`).classList.add('active');
+        }
+
+        // --- Heatmaps ---
+        async function loadHeatmaps() {
+            try {
+                const res = await fetch('/api/heatmap');
+                const data = await res.json();
+                if (data.error === "data_missing") {
+                    document.getElementById('heatmap-error').classList.remove('hidden');
+                    return;
+                }
+                Plotly.newPlot('index-heatmap', data.index_fig.data, data.index_fig.layout, {responsive: true});
+                Plotly.newPlot('market-heatmap', data.market_fig.data, data.market_fig.layout, {responsive: true});
+            } catch (e) {
+                console.warn("Heatmap error:", e);
+            }
+        }
+
+        // --- Autocomplete ---
+        searchInput.addEventListener('input', async (e) => {
+            const q = e.target.value.trim();
+            if (q.length < 2) {
+                resultsDiv.classList.add('hidden');
+                return;
+            }
+
+            try {
+                const res = await fetch(`/api/search?q=${q}`);
+                const data = await res.json();
+                
+                if (data.quotes && data.quotes.length > 0) {
+                    resultsDiv.innerHTML = data.quotes.map(s => `
+                        <div class="p-3 hover:bg-green-500 hover:text-black cursor-pointer border-b border-[#30363d] last:border-0 transition-all"
+                             onclick="startAnalysis('${s.symbol}')">
+                            <span class="font-bold">${s.symbol}</span> - ${s.shortname || s.longname || 'Unknown'}
+                        </div>
+                    `).join('');
+                    resultsDiv.classList.remove('hidden');
+                } else {
+                    resultsDiv.classList.add('hidden');
+                }
+            } catch (err) { console.error(err); }
+        });
+
+        searchInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') triggerManualSearch(); });
+
+        function triggerManualSearch() {
+            const ticker = searchInput.value.trim();
+            if (ticker) startAnalysis(ticker);
+        }
+
+        // --- WebSocket Streaming ---
+        function startAnalysis(ticker) {
+            resultsDiv.classList.add('hidden');
+            searchInput.value = ticker;
+            document.getElementById('current-ticker').innerText = ticker.toUpperCase();
+            showView('arena');
+
+            // Reset UI
+            document.getElementById('analyst-reports').innerHTML = '';
+            document.getElementById('debate-history').innerHTML = '';
+            document.getElementById('decision-output').innerHTML = '<div class="animate-pulse text-green-500">Connecting to Groq Agent Cluster...</div>';
+            document.getElementById('report-xbrl').innerHTML = '<span class="italic text-gray-500">Waiting for analyst to parse financial filings...</span>';
+            document.getElementById('report-ops').innerHTML = '<span class="italic text-gray-500">Waiting for analyst to parse supply chain data...</span>';
+            document.getElementById('stream-status').innerText = 'CONNECTING';
+
+            if (socket) socket.close();
+
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            socket = new WebSocket(`${protocol}//${window.location.host}/ws/stream-analysis`);
+
+            socket.onopen = () => {
+                socket.send(JSON.stringify({ company: ticker }));
+                document.getElementById('stream-status').innerText = 'ANALYZING';
+            };
+
+            socket.onmessage = (event) => {
+                const data = JSON.parse(event.data);
+                if (data.status === 'completed') {
+                    document.getElementById('stream-status').innerText = 'FINISHED';
+                    return;
+                }
+                handleEvent(data);
+            };
+        }
+
+        function handleEvent(data) {
+            const node = data.node;
+            const update = data.update;
+
+            // Update Reports Tab and Arena Cards
+            if (node === 'fundamentals_analyst' && update.fundamentals_report) {
+                document.getElementById('report-xbrl').innerText = update.fundamentals_report;
+                addArenaCard('Fundamentals', update.fundamentals_report);
+            }
+            
+            if (node === 'operations_analyst' && update.operations_report) {
+                document.getElementById('report-ops').innerText = update.operations_report;
+                addArenaCard('Operations', update.operations_report);
+            }
+
+            if (node === 'market_analyst' && update.market_report) {
+                addArenaCard('Technical', update.market_report);
+            }
+
+            if (node === 'news_analyst' && update.news_report) {
+                addArenaCard('Macro News', update.news_report);
+            }
+
+            // Handle Debates
+            if (node === 'bull_researcher' || node === 'bear_researcher') {
+                const debate = update.investment_debate_state.current_response;
+                const msg = document.createElement('div');
+                const isBull = node === 'bull_researcher';
+                msg.className = `p-4 rounded-xl animate-fade-in ${isBull ? 'bg-green-500/10 border-l-4 border-green-500' : 'bg-red-500/10 border-l-4 border-red-500'}`;
+                msg.innerHTML = `<span class="font-bold text-xs ${isBull ? 'text-green-500' : 'text-red-500'} uppercase">${node.replace('_',' ')}</span><p class="mt-1 text-sm">${debate}</p>`;
+                document.getElementById('debate-history').appendChild(msg);
+                msg.scrollIntoView({behavior: 'smooth'});
+            }
+
+            // Handle Risk
+            if (node.startsWith('risk_')) {
+                const lastMsg = update.risk_debate_state.history.split('\n').pop();
+                const msg = document.createElement('div');
+                msg.className = `p-3 rounded-lg bg-blue-500/5 border border-blue-500/20 italic text-xs animate-fade-in`;
+                msg.innerHTML = `<span class="font-bold text-blue-400">RISK: ${node.split('_')[1].toUpperCase()}</span><p class="mt-1">${lastMsg}</p>`;
+                document.getElementById('debate-history').appendChild(msg);
+                msg.scrollIntoView({behavior: 'smooth'});
+            }
+
+            // Handle Final
+            if (node === 'portfolio_manager') {
+                document.getElementById('decision-output').innerText = update.final_trade_decision;
+            }
+        }
+
+        function addArenaCard(title, text) {
+            const card = document.createElement('div');
+            card.className = 'agent-card p-4 rounded-xl animate-fade-in';
+            card.innerHTML = `
+                <div class="flex justify-between mb-2">
+                    <span class="text-xs font-bold text-green-500 uppercase">${title}</span>
+                </div>
+                <div class="text-[11px] text-gray-400 whitespace-pre-wrap">${text.substring(0, 300)}...</div>
+            `;
+            document.getElementById('analyst-reports').prepend(card);
+        }
+
+        loadHeatmaps();
+    </script>
 </body>
 </html>
