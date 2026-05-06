@@ -13,7 +13,7 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DATA_RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
 
 def scrape_bse_xbrl(company_name: str):
-    """Deeply stealthy scraper to avoid blank screens and bot detection."""
+    """Deeply stealthy scraper using the Beta site with robust click handling."""
     os.makedirs(DATA_RAW_DIR, exist_ok=True)
     
     options = Options()
@@ -25,7 +25,7 @@ def scrape_bse_xbrl(company_name: str):
     
     driver = webdriver.Chrome(options=options)
     
-    # Hide webdriver flag more deeply
+    # Hide webdriver flag
     driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
         "source": "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
     })
@@ -33,50 +33,63 @@ def scrape_bse_xbrl(company_name: str):
     filepath = os.path.join(DATA_RAW_DIR, f"{company_name.upper()}_xbrl.txt")
 
     try:
-        # Start at a neutral page
-        driver.get("https://www.google.com")
-        time.sleep(2)
-        
-        # Navigate to BSE
-        driver.get("https://www.bseindia.com/")
+        # Use the Beta site as the entry point as suggested by user
+        # This page usually has a search bar in the header
+        driver.get("https://beta.bseindia.com/stock-share-price/lupin-ltd/lupin/500257/")
         wait = WebDriverWait(driver, 30)
         
-        # Look for search box
+        # Robust Search Box Interaction
         search_box = wait.until(EC.presence_of_element_located((By.ID, "getquotesearch")))
-        search_box.click()
-        search_box.send_keys(company_name)
-        time.sleep(5)
-
-        first_result = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "li.quotemenu")))
-        first_result.click()
         
-        # Financials
+        # Scroll to it first to avoid "not clickable at point" errors
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", search_box)
+        time.sleep(2)
+        
+        # Use JS to click and clear to bypass interceptors
+        driver.execute_script("arguments[0].click();", search_box)
+        driver.execute_script("arguments[0].value = '';", search_box)
+        
+        # Send keys
+        search_box.send_keys(company_name)
+        print(f"DEBUG: Searching for {company_name}...")
+        time.sleep(5) # Wait for dropdown
+
+        # Click the first result in the dropdown
+        first_result = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "li.quotemenu")))
+        driver.execute_script("arguments[0].click();", first_result)
+        
+        # --- Navigation to XBRL ---
+        # Wait for the target company page to load (look for the 'afi' tab)
         wait.until(EC.presence_of_element_located((By.ID, "afi"))) 
+        time.sleep(2)
+
+        # Click Financials (using JS for stability)
         driver.execute_script("document.getElementById('afi').click();")
         time.sleep(3)
 
-        # Results
-        res_link = wait.until(EC.element_to_be_clickable((By.ID, "l61")))
+        # Click Results (l61)
+        res_link = wait.until(EC.presence_of_element_located((By.ID, "l61")))
         driver.execute_script("arguments[0].click();", res_link)
         time.sleep(3)
 
-        # Click here
+        # Click "click here." link
         click_here = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "click here.")))
-        click_here.click()
+        driver.execute_script("arguments[0].click();", click_here)
         time.sleep(5)
 
+        # Handle Windows
         if len(driver.window_handles) > 1:
             driver.switch_to.window(driver.window_handles[-1])
         
-        # XBRL
-        xbrl_link = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a.fa-file-code-o")))
-        xbrl_link.click()
+        # XBRL Icon (fa-file-code-o)
+        xbrl_link = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.fa-file-code-o")))
+        driver.execute_script("arguments[0].click();", xbrl_link)
         time.sleep(5)
 
         if len(driver.window_handles) > 2:
             driver.switch_to.window(driver.window_handles[-1])
         
-        # Extract body text
+        # Extract Body Text
         body_text = wait.until(EC.presence_of_element_located((By.TAG_NAME, "body"))).text
         
         if not body_text or len(body_text) < 100:
@@ -94,4 +107,5 @@ def scrape_bse_xbrl(company_name: str):
         driver.quit()
 
 if __name__ == "__main__":
-    print(scrape_bse_xbrl("CIPLA"))
+    name = sys.argv[1] if len(sys.argv) > 1 else "CIPLA"
+    print(scrape_bse_xbrl(name))

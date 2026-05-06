@@ -20,11 +20,13 @@ def get_bse_xbrl_data(
     force_refresh: Annotated[bool, "Whether to force a new scrape"] = False
 ) -> str:
     """Read existing BSE XBRL text data. If file is missing, it triggers a live Selenium scrape."""
-    filepath = os.path.join(DATA_RAW_DIR, f"{symbol.upper()}_xbrl.txt")
+    # Strip exchange suffixes for local file check and scraper search
+    clean_symbol = symbol.split(".")[0].upper()
+    filepath = os.path.join(DATA_RAW_DIR, f"{clean_symbol}_xbrl.txt")
     
     if force_refresh or not os.path.exists(filepath):
-        print(f"DEBUG: Triggering live BSE scrape for {symbol}...")
-        result = scrape_bse_xbrl(symbol)
+        print(f"DEBUG: Triggering live BSE scrape for {clean_symbol}...")
+        result = scrape_bse_xbrl(clean_symbol)
         if "ERROR" in result:
             return result
 
@@ -32,7 +34,7 @@ def get_bse_xbrl_data(
         with open(filepath, "r", encoding="utf-8") as f:
             return f.read()
     except Exception as e:
-        return f"Error reading XBRL data for {symbol}: {str(e)}"
+        return f"Error reading XBRL data for {clean_symbol}: {str(e)}"
 
 @tool
 def get_exportersindia_data(
@@ -40,11 +42,13 @@ def get_exportersindia_data(
     force_refresh: Annotated[bool, "Whether to force a new scrape"] = False
 ) -> str:
     """Read existing ExportersIndia text data. If file is missing, it triggers a live Selenium scrape."""
-    filepath = os.path.join(DATA_RAW_DIR, f"{symbol.upper()}_exportersindia.txt")
+    # Strip exchange suffixes
+    clean_symbol = symbol.split(".")[0].upper()
+    filepath = os.path.join(DATA_RAW_DIR, f"{clean_symbol}_exportersindia.txt")
     
     if force_refresh or not os.path.exists(filepath):
-        print(f"DEBUG: Triggering live ExportersIndia scrape for {symbol}...")
-        result = scrape_exportersindia(symbol)
+        print(f"DEBUG: Triggering live ExportersIndia scrape for {clean_symbol}...")
+        result = scrape_exportersindia(clean_symbol)
         if "ERROR" in result:
             return result
 
@@ -52,7 +56,7 @@ def get_exportersindia_data(
         with open(filepath, "r", encoding="utf-8") as f:
             return f.read()
     except Exception as e:
-        return f"Error reading ExportersIndia data for {symbol}: {str(e)}"
+        return f"Error reading ExportersIndia data for {clean_symbol}: {str(e)}"
 
 @tool
 def get_bse_market_context(

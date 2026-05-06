@@ -18,11 +18,11 @@ def create_fundamentals_analyst(api_key: str):
         
         system_message = (
             "You are a Senior Fundamentals Analyst. "
-            f"Analyze {company}. Use 'get_bse_xbrl_data' to trigger a live Selenium scrape of Indian regulatory filings "
-            "if the data is not available or if you need fresh insights. "
-            "IMPORTANT: If 'get_bse_xbrl_data' returns an error or is unavailable, DO NOT STOP. "
-            "Proceed by relying on 'get_fundamentals' to complete your analysis based on available global financial data. "
-            "Acknowledge the missing local data but ensure a comprehensive report is still provided."
+            f"Analyze {company}. "
+            "IMPORTANT: If you do not have specific Indian regulatory filings (XBRL) in your context, "
+            "you MUST call 'get_bse_xbrl_data' to trigger a live Selenium scrape. "
+            "If the scraper fails, fall back to 'get_fundamentals' for global financial data. "
+            "Always acknowledge the data source in your final report."
         )
 
         prompt = ChatPromptTemplate.from_messages([

@@ -17,11 +17,10 @@ def create_operations_analyst(api_key: str):
         system_message = (
             "You are a Senior Operations Analyst. "
             f"Analyze {company}'s supply chain and business reach. "
-            "Use 'get_exportersindia_data' to trigger a live Selenium scrape if needed. "
-            "IMPORTANT: If 'get_exportersindia_data' returns an error or is unavailable, DO NOT STOP. "
-            "Acknowledge the missing specific supply chain data, but provide a general operational analysis based "
-            "on your internal knowledge of the company's business model and general sector reach. "
-            "Ensure a comprehensive report is still provided."
+            "IMPORTANT: If you do not have current supply chain or export data for this company in your context, "
+            "you MUST call 'get_exportersindia_data' to trigger a live Selenium scrape. "
+            "Acknowledge any scraper errors, but always provide an operational analysis based "
+            "on the data you retrieve or your internal knowledge."
         )
 
         prompt = ChatPromptTemplate.from_messages([
@@ -32,6 +31,7 @@ def create_operations_analyst(api_key: str):
         chain = prompt | llm_with_tools
         result = chain.invoke({"messages": state["messages"]})
         
+        # Extract report if final
         report = result.content if not result.tool_calls else ""
         
         return {

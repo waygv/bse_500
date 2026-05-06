@@ -6,116 +6,105 @@
     <title>BSE TradingAgents Terminal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
         body { font-family: 'JetBrains+Mono', monospace; background-color: #0d1117; color: #e6edf3; }
         .terminal-glow { box-shadow: 0 0 15px rgba(0, 255, 127, 0.1); }
-        .agent-card { border: 1px solid #30363d; background-color: #161b22; transition: all 0.3s ease; }
+        .agent-card { border: 1px solid #30363d; background-color: #161b22; transition: all 0.3s ease; cursor: pointer; }
         .agent-card:hover { border-color: #00ff7f; }
+        .agent-card.expanded { max-height: none !important; position: fixed; top: 10%; left: 10%; right: 10%; bottom: 10%; z-index: 100; overflow-y: auto; padding: 2rem; border: 2px solid #00ff7f; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .animate-fade-in { animation: fadeIn 0.5s ease-in; }
+        .animate-fade-in { animation: fadeIn 0.3s ease-in; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .tab-btn { font-size: 0.875rem; font-weight: 700; padding: 0.25rem 0.5rem; transition: all 0.2s; border-bottom: 2px solid transparent; color: #8b949e; }
-        .tab-btn.active { border-color: #00ff7f; color: #ffffff; }
+        .tab-btn { font-size: 0.75rem; font-weight: 700; padding: 0.5rem 1rem; transition: all 0.2s; border-bottom: 2px solid transparent; color: #8b949e; text-transform: uppercase; }
+        .tab-btn.active { border-color: #00ff7f; color: #ffffff; background-color: rgba(0, 255, 127, 0.05); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0d1117; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #30363d; border-radius: 10px; }
+        
+        .prose-terminal h3 { color: #00ff7f; font-weight: bold; margin-top: 1rem; margin-bottom: 0.5rem; font-size: 0.85rem; border-bottom: 1px solid #30363d; padding-bottom: 2px; }
+        .prose-terminal ul { list-style-type: none; padding-left: 0; }
+        .prose-terminal li { position: relative; padding-left: 1.25rem; margin-bottom: 0.4rem; }
+        .prose-terminal li::before { content: ">"; position: absolute; left: 0; color: #00ff7f; }
+        .prose-terminal strong { color: #58a6ff; }
     </style>
 </head>
-<body class="p-4 md:p-8">
-    <!-- Top Nav / Search -->
-    <header class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
+<body class="p-4 md:p-6 overflow-x-hidden">
+    <!-- Top Nav -->
+    <header class="flex flex-col lg:flex-row justify-between items-center mb-8 gap-6">
         <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center font-bold text-black text-xl">B</div>
-            <h1 class="text-2xl font-bold tracking-tighter">TRADING<span class="text-green-500">AGENTS</span> TERMINAL</h1>
+            <div class="w-10 h-10 bg-green-500 rounded flex items-center justify-center font-bold text-black text-xl">B</div>
+            <h1 class="text-xl font-bold tracking-tighter">TRADING<span class="text-green-500">AGENTS</span> <span class="text-[10px] text-gray-500">BETA</span></h1>
         </div>
         
         <div class="relative w-full max-w-xl">
             <div class="flex gap-2">
-                <input type="text" id="ticker-search" placeholder="Search Ticker (e.g. RELIANCE.NS)..." 
-                       class="w-full bg-[#161b22] border border-[#30363d] rounded-full py-3 px-6 focus:outline-none focus:border-green-500 transition-all">
-                <button onclick="triggerManualSearch()" class="bg-green-500 text-black px-6 rounded-full font-bold hover:bg-green-400 transition-colors">ANALYZE</button>
+                <input type="text" id="ticker-search" placeholder="Search Ticker (e.g. RELIANCE)..." 
+                       class="w-full bg-[#161b22] border border-[#30363d] rounded py-2 px-5 focus:outline-none focus:border-green-500 text-sm">
+                <button onclick="triggerManualSearch()" class="bg-green-500 text-black px-5 rounded font-bold hover:bg-green-400 text-xs">ANALYZE</button>
             </div>
-            <div id="search-results" class="absolute top-full left-0 right-0 bg-[#161b22] border border-[#30363d] rounded-xl mt-2 hidden z-50 overflow-hidden shadow-2xl text-sm">
-                <!-- Autocomplete results here -->
-            </div>
+            <div id="search-results" class="absolute top-full left-0 right-0 bg-[#161b22] border border-[#30363d] rounded-b mt-1 hidden z-50 shadow-2xl"></div>
         </div>
 
-        <div class="flex gap-4">
-            <button id="btn-dash" onclick="showView('dashboard')" class="tab-btn active">DASHBOARD</button>
-            <button id="btn-arena" onclick="showView('arena')" class="tab-btn">AGENT ARENA</button>
-            <button id="btn-reports" onclick="showView('reports')" class="tab-btn">COMPANY REPORTS</button>
+        <div class="flex bg-[#161b22] rounded p-1 border border-[#30363d]">
+            <button id="btn-dash" onclick="showView('dashboard')" class="tab-btn active">Market</button>
+            <button id="btn-arena" onclick="showView('arena')" class="tab-btn">Arena</button>
+            <button id="btn-reports" onclick="showView('reports')" class="tab-btn">Reports</button>
         </div>
     </header>
 
-    <!-- Views -->
     <main>
         <!-- Dashboard View -->
-        <section id="view-dashboard" class="space-y-8 animate-fade-in">
-            <div id="heatmap-error" class="hidden p-4 bg-red-500/10 border border-red-500 text-red-500 rounded-xl text-center">
-                Market data is being initialized. Please wait a few moments and refresh.
+        <section id="view-dashboard" class="space-y-6 animate-fade-in">
+            <div id="heatmap-error" class="hidden p-4 bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 rounded text-center text-xs">
+                Market data sync in progress. Heatmaps will load automatically...
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="bg-[#161b22] rounded-2xl p-6 border border-[#30363d]">
-                    <div id="index-heatmap" class="w-full h-[500px] flex items-center justify-center italic text-gray-500">Loading Index Heatmap...</div>
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                <div class="bg-[#161b22] rounded-xl p-4 border border-[#30363d] min-h-[500px]">
+                    <div id="index-heatmap" class="w-full h-full"></div>
                 </div>
-                <div class="bg-[#161b22] rounded-2xl p-6 border border-[#30363d]">
-                    <div id="market-heatmap" class="w-full h-[500px] flex items-center justify-center italic text-gray-500">Loading Market Heatmap...</div>
+                <div class="bg-[#161b22] rounded-xl p-4 border border-[#30363d] min-h-[500px]">
+                    <div id="market-heatmap" class="w-full h-full"></div>
                 </div>
             </div>
         </section>
 
         <!-- Agent Arena View -->
-        <section id="view-arena" class="hidden space-y-6 animate-fade-in">
-            <div class="flex justify-between items-center">
-                <h2 class="text-xl font-bold">LIVE ANALYSIS: <span id="current-ticker" class="text-green-500">NONE</span></h2>
-                <div id="stream-status" class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-400 uppercase tracking-widest">IDLE</div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-[700px]">
-                <div class="lg:col-span-1 flex flex-col gap-4 overflow-y-auto pr-2 scrollbar-hide">
-                    <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider">Agent Thought Logs</h3>
-                    <div id="analyst-reports" class="space-y-4"></div>
+        <section id="view-arena" class="hidden space-y-4 animate-fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 h-[75vh]">
+                <!-- Analytical Logs -->
+                <div class="lg:col-span-3 flex flex-col gap-3 overflow-y-auto custom-scrollbar pr-2">
+                    <h3 class="text-[10px] font-bold text-gray-500 uppercase tracking-widest px-1 mb-2">Internal Logs</h3>
+                    <div id="analyst-reports" class="space-y-3"></div>
                 </div>
 
-                <div class="lg:col-span-1 flex flex-col gap-4 bg-[#0d1117] rounded-xl border border-[#30363d] p-4 overflow-y-auto scrollbar-hide relative">
-                    <h3 class="text-xs font-bold text-gray-500 sticky top-0 bg-[#0d1117] py-1 uppercase tracking-wider">Dialectical Debate</h3>
-                    <div id="debate-history" class="space-y-6 text-sm"></div>
-                </div>
-
-                <div class="lg:col-span-1 flex flex-col gap-4">
-                    <h3 class="text-xs font-bold text-gray-500 uppercase tracking-wider">Final Executive Decision</h3>
-                    <div id="decision-output" class="bg-green-500/5 border border-green-500/20 rounded-xl p-6 h-full overflow-y-auto whitespace-pre-wrap leading-relaxed text-sm">
-                        <span class="text-gray-500 italic">Initiate a search to start the agentic workflow.</span>
+                <!-- Debate Column -->
+                <div class="lg:col-span-6 flex flex-col bg-[#161b22] rounded-xl border border-[#30363d] overflow-hidden">
+                    <h3 class="text-[10px] font-bold text-gray-500 uppercase p-3 border-b border-[#30363d]">Adversarial Dialectic: <span id="current-ticker" class="text-green-500 ml-2">---</span></h3>
+                    <div id="debate-history" class="flex-1 overflow-y-auto custom-scrollbar p-5 space-y-6">
+                        <div class="text-center text-gray-600 italic text-xs mt-20">Initialize a search to start the agentic flow...</div>
                     </div>
+                </div>
+
+                <!-- Final Decision Column -->
+                <div class="lg:col-span-3 flex flex-col gap-3">
+                    <h3 class="text-[10px] font-bold text-gray-500 uppercase px-1 mb-2">Risk Memo</h3>
+                    <div id="decision-output" class="bg-green-500/5 border border-green-500/10 rounded-xl p-6 h-full overflow-y-auto custom-scrollbar text-[11px] prose-terminal"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Company Reports View -->
-        <section id="view-reports" class="hidden space-y-8 animate-fade-in">
-            <div class="flex justify-between items-center">
-                <h2 class="text-xl font-bold text-green-500 uppercase tracking-tighter">Deep Dive Analysis</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- XBRL Section -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-2">
-                        <div class="w-1 h-6 bg-blue-500"></div>
-                        <h3 class="text-lg font-bold">XBRL Financial Summary</h3>
-                    </div>
-                    <div id="report-xbrl" class="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 min-h-[400px] text-sm leading-relaxed whitespace-pre-wrap">
-                        <span class="text-gray-600 italic">No XBRL data parsed yet. Run analysis for a company to populate this section.</span>
-                    </div>
+        <!-- Reports View -->
+        <section id="view-reports" class="hidden space-y-6 animate-fade-in">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 h-[80vh]">
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden flex flex-col shadow-2xl">
+                    <div class="bg-blue-500/5 p-4 border-b border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider">XBRL Data Stream</div>
+                    <div id="report-xbrl" class="p-8 overflow-y-auto custom-scrollbar prose-terminal text-[11px] flex-1"></div>
                 </div>
-
-                <!-- Operations/Exporters Section -->
-                <div class="space-y-4">
-                    <div class="flex items-center gap-2">
-                        <div class="w-1 h-6 bg-orange-500"></div>
-                        <h3 class="text-lg font-bold">Trade & Export Footprint</h3>
-                    </div>
-                    <div id="report-ops" class="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 min-h-[400px] text-sm leading-relaxed whitespace-pre-wrap">
-                        <span class="text-gray-600 italic">No supply chain data parsed yet. Run analysis for a company to populate this section.</span>
-                    </div>
+                <div class="bg-[#161b22] border border-[#30363d] rounded-xl overflow-hidden flex flex-col shadow-2xl">
+                    <div class="bg-orange-500/5 p-4 border-b border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider">Trade Ecosystem</div>
+                    <div id="report-ops" class="p-8 overflow-y-auto custom-scrollbar prose-terminal text-[11px] flex-1"></div>
                 </div>
             </div>
         </section>
@@ -126,97 +115,59 @@
         const resultsDiv = document.getElementById('search-results');
         let socket = null;
 
-        // --- View Navigation ---
         function showView(viewId) {
-            const views = ['dashboard', 'arena', 'reports'];
-            views.forEach(v => {
+            ['dashboard', 'arena', 'reports'].forEach(v => {
                 document.getElementById(`view-${v}`).classList.add('hidden');
                 document.getElementById(`btn-${v === 'dashboard' ? 'dash' : v}`).classList.remove('active');
             });
             document.getElementById(`view-${viewId}`).classList.remove('hidden');
             document.getElementById(`btn-${viewId === 'dashboard' ? 'dash' : viewId}`).classList.add('active');
+            if (viewId === 'dashboard') loadHeatmaps();
         }
 
-        // --- Heatmaps ---
         async function loadHeatmaps() {
-            try {
-                const res = await fetch('/api/heatmap');
-                const data = await res.json();
-                if (data.error === "data_missing") {
-                    document.getElementById('heatmap-error').classList.remove('hidden');
-                    return;
-                }
-                Plotly.newPlot('index-heatmap', data.index_fig.data, data.index_fig.layout, {responsive: true});
-                Plotly.newPlot('market-heatmap', data.market_fig.data, data.market_fig.layout, {responsive: true});
-            } catch (e) {
-                console.warn("Heatmap error:", e);
-            }
-        }
-
-        // --- Autocomplete ---
-        searchInput.addEventListener('input', async (e) => {
-            const q = e.target.value.trim();
-            if (q.length < 2) {
-                resultsDiv.classList.add('hidden');
+            const res = await fetch('/api/heatmap');
+            const data = await res.json();
+            if (data.error || !data.index_fig) {
+                document.getElementById('heatmap-error').classList.remove('hidden');
                 return;
             }
-
-            try {
-                const res = await fetch(`/api/search?q=${q}`);
-                const data = await res.json();
-                
-                if (data.quotes && data.quotes.length > 0) {
-                    resultsDiv.innerHTML = data.quotes.map(s => `
-                        <div class="p-3 hover:bg-green-500 hover:text-black cursor-pointer border-b border-[#30363d] last:border-0 transition-all"
-                             onclick="startAnalysis('${s.symbol}')">
-                            <span class="font-bold">${s.symbol}</span> - ${s.shortname || s.longname || 'Unknown'}
-                        </div>
-                    `).join('');
-                    resultsDiv.classList.remove('hidden');
-                } else {
-                    resultsDiv.classList.add('hidden');
-                }
-            } catch (err) { console.error(err); }
-        });
-
-        searchInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') triggerManualSearch(); });
-
-        function triggerManualSearch() {
-            const ticker = searchInput.value.trim();
-            if (ticker) startAnalysis(ticker);
+            document.getElementById('heatmap-error').classList.add('hidden');
+            const opts = { responsive: true, displayModeBar: false };
+            Plotly.newPlot('index-heatmap', data.index_fig.data, data.index_fig.layout, opts);
+            Plotly.newPlot('market-heatmap', data.market_fig.data, data.market_fig.layout, opts);
         }
 
-        // --- WebSocket Streaming ---
+        searchInput.addEventListener('input', async (e) => {
+            const q = e.target.value.trim();
+            if (q.length < 2) return;
+            const res = await fetch(`/api/search?q=${q}`);
+            const data = await res.json();
+            if (data.quotes) {
+                resultsDiv.innerHTML = data.quotes.map(s => `<div class="p-3 hover:bg-[#30363d] cursor-pointer text-xs border-b border-[#30363d]" onclick="startAnalysis('${s.symbol}')"><span class="font-bold text-green-500">${s.symbol}</span> | ${s.shortname}</div>`).join('');
+                resultsDiv.classList.remove('hidden');
+            }
+        });
+
+        function triggerManualSearch() { if (searchInput.value) startAnalysis(searchInput.value); }
+        searchInput.addEventListener('keypress', e => e.key==='Enter' && triggerManualSearch());
+
         function startAnalysis(ticker) {
             resultsDiv.classList.add('hidden');
             searchInput.value = ticker;
             document.getElementById('current-ticker').innerText = ticker.toUpperCase();
             showView('arena');
-
-            // Reset UI
+            
             document.getElementById('analyst-reports').innerHTML = '';
             document.getElementById('debate-history').innerHTML = '';
-            document.getElementById('decision-output').innerHTML = '<div class="animate-pulse text-green-500">Connecting to Groq Agent Cluster...</div>';
-            document.getElementById('report-xbrl').innerHTML = '<span class="italic text-gray-500">Waiting for analyst to parse financial filings...</span>';
-            document.getElementById('report-ops').innerHTML = '<span class="italic text-gray-500">Waiting for analyst to parse supply chain data...</span>';
-            document.getElementById('stream-status').innerText = 'CONNECTING';
-
+            document.getElementById('decision-output').innerHTML = '<div class="animate-pulse text-green-500 text-[9px] uppercase tracking-tighter">Cluster Handshake...</div>';
+            
             if (socket) socket.close();
-
-            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-            socket = new WebSocket(`${protocol}//${window.location.host}/ws/stream-analysis`);
-
-            socket.onopen = () => {
-                socket.send(JSON.stringify({ company: ticker }));
-                document.getElementById('stream-status').innerText = 'ANALYZING';
-            };
-
-            socket.onmessage = (event) => {
-                const data = JSON.parse(event.data);
-                if (data.status === 'completed') {
-                    document.getElementById('stream-status').innerText = 'FINISHED';
-                    return;
-                }
+            socket = new WebSocket(`${window.location.protocol==='https:'?'wss':'ws'}://${window.location.host}/ws/stream-analysis`);
+            socket.onopen = () => socket.send(JSON.stringify({ company: ticker }));
+            socket.onmessage = e => {
+                const data = JSON.parse(e.data);
+                if (data.status === 'completed') return;
                 handleEvent(data);
             };
         }
@@ -225,61 +176,53 @@
             const node = data.node;
             const update = data.update;
 
-            // Update Reports Tab and Arena Cards
-            if (node === 'fundamentals_analyst' && update.fundamentals_report) {
-                document.getElementById('report-xbrl').innerText = update.fundamentals_report;
-                addArenaCard('Fundamentals', update.fundamentals_report);
+            if (update.fundamentals_report) {
+                document.getElementById('report-xbrl').innerHTML = marked.parse(update.fundamentals_report);
+                addArenaCard('FUNDAMENTALS', update.fundamentals_report);
             }
-            
-            if (node === 'operations_analyst' && update.operations_report) {
-                document.getElementById('report-ops').innerText = update.operations_report;
-                addArenaCard('Operations', update.operations_report);
+            if (update.operations_report) {
+                document.getElementById('report-ops').innerHTML = marked.parse(update.operations_report);
+                addArenaCard('OPERATIONS', update.operations_report);
             }
+            if (update.market_report) addArenaCard('MARKET DATA', update.market_report);
+            if (update.news_report) addArenaCard('WORLD AFFAIRS', update.news_report);
 
-            if (node === 'market_analyst' && update.market_report) {
-                addArenaCard('Technical', update.market_report);
-            }
-
-            if (node === 'news_analyst' && update.news_report) {
-                addArenaCard('Macro News', update.news_report);
-            }
-
-            // Handle Debates
-            if (node === 'bull_researcher' || node === 'bear_researcher') {
-                const debate = update.investment_debate_state.current_response;
+            if (node.includes('researcher')) {
+                const isBull = node.includes('bull');
                 const msg = document.createElement('div');
-                const isBull = node === 'bull_researcher';
-                msg.className = `p-4 rounded-xl animate-fade-in ${isBull ? 'bg-green-500/10 border-l-4 border-green-500' : 'bg-red-500/10 border-l-4 border-red-500'}`;
-                msg.innerHTML = `<span class="font-bold text-xs ${isBull ? 'text-green-500' : 'text-red-500'} uppercase">${node.replace('_',' ')}</span><p class="mt-1 text-sm">${debate}</p>`;
-                document.getElementById('debate-history').appendChild(msg);
-                msg.scrollIntoView({behavior: 'smooth'});
+                msg.className = `p-4 rounded border ${isBull?'bg-green-500/5 border-green-500/10':'bg-red-500/5 border-red-500/10'} animate-fade-in prose-terminal`;
+                msg.innerHTML = `<span class="text-[9px] font-bold uppercase ${isBull?'text-green-500':'text-red-500'}">${node.replace('_',' ')}</span><div class="text-[11px] leading-relaxed mt-1">${marked.parse(update.investment_debate_state.current_response)}</div>`;
+                const db = document.getElementById('debate-history');
+                if (db.innerText.includes('Initialize')) db.innerHTML = '';
+                db.appendChild(msg);
+                db.scrollTop = db.scrollHeight;
             }
 
-            // Handle Risk
-            if (node.startsWith('risk_')) {
-                const lastMsg = update.risk_debate_state.history.split('\n').pop();
+            if (node.includes('risk')) {
+                const last = update.risk_debate_state.history.split('\n').pop();
                 const msg = document.createElement('div');
-                msg.className = `p-3 rounded-lg bg-blue-500/5 border border-blue-500/20 italic text-xs animate-fade-in`;
-                msg.innerHTML = `<span class="font-bold text-blue-400">RISK: ${node.split('_')[1].toUpperCase()}</span><p class="mt-1">${lastMsg}</p>`;
+                msg.className = "text-[10px] text-blue-400/70 italic p-2 border-l border-blue-500/30 ml-4";
+                msg.innerHTML = `🛡️ ${last}`;
                 document.getElementById('debate-history').appendChild(msg);
-                msg.scrollIntoView({behavior: 'smooth'});
+                document.getElementById('debate-history').scrollTop = document.getElementById('debate-history').scrollHeight;
             }
 
-            // Handle Final
             if (node === 'portfolio_manager') {
-                document.getElementById('decision-output').innerText = update.final_trade_decision;
+                document.getElementById('decision-output').innerHTML = marked.parse(update.final_trade_decision);
             }
         }
 
         function addArenaCard(title, text) {
             const card = document.createElement('div');
-            card.className = 'agent-card p-4 rounded-xl animate-fade-in';
-            card.innerHTML = `
-                <div class="flex justify-between mb-2">
-                    <span class="text-xs font-bold text-green-500 uppercase">${title}</span>
-                </div>
-                <div class="text-[11px] text-gray-400 whitespace-pre-wrap">${text.substring(0, 300)}...</div>
-            `;
+            card.className = 'agent-card p-3 rounded animate-fade-in border-l border-green-500/50 max-h-32 overflow-hidden';
+            card.onclick = () => {
+                if(card.classList.contains('expanded')) card.classList.remove('expanded');
+                else {
+                    document.querySelectorAll('.agent-card.expanded').forEach(c => c.classList.remove('expanded'));
+                    card.classList.add('expanded');
+                }
+            };
+            card.innerHTML = `<div class="text-[8px] font-bold text-gray-500 uppercase mb-1">${title}</div><div class="text-[10px] text-gray-400 prose-terminal">${marked.parse(text)}</div>`;
             document.getElementById('analyst-reports').prepend(card);
         }
 

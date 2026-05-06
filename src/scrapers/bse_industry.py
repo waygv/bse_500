@@ -6,19 +6,24 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
+import glob
 
 # Get project root
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 DATA_PROCESSED_DIR = os.path.join(BASE_DIR, "data", "processed")
 
 def scrape_bse_industry():
-    """Trigger Selenium to download the Index.csv from BSE with robust headers."""
+    """Trigger Stealth Selenium to download Index.csv and ensure clean naming."""
+    print(f"SCRAPER: Starting Index download to {DATA_PROCESSED_DIR}...")
     os.makedirs(DATA_PROCESSED_DIR, exist_ok=True)
     
+    target_filename = "Index.csv"
+    target_path = os.path.join(DATA_PROCESSED_DIR, target_filename)
+
     chrome_options = Options()
     chrome_options.add_argument("--disable-blink-features=AutomationControlled")
     chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36")
 
     prefs = {
         "download.default_directory": DATA_PROCESSED_DIR,
@@ -41,14 +46,27 @@ def scrape_bse_industry():
         )
         driver.execute_script("arguments[0].click();", download_icon)
         
-        print("Waiting for Index.csv download...")
+        print("SCRAPER: Index download clicked. Waiting...")
         time.sleep(15) 
         
-        return f"SUCCESS: Index download triggered to {DATA_PROCESSED_DIR}"
+        # --- SMART RENAMING ---
+        all_files = glob.glob(os.path.join(DATA_PROCESSED_DIR, "*"))
+        csv_files = [f for f in all_files if (".csv" in f or "Index" in f) and target_filename not in os.path.basename(f)]
+        
+        if csv_files:
+            latest_download = max(csv_files, key=os.path.getmtime)
+            if os.path.exists(target_path): os.remove(target_path)
+            os.rename(latest_download, target_path)
+            print(f"SCRAPER: Successfully saved fresh {target_filename}")
+        else:
+            print(f"SCRAPER: No new file found to rename for {target_filename}.")
+
+        return "SUCCESS"
     except Exception as e:
-        return f"ERROR: Index download failed: {str(e)}"
+        print(f"SCRAPER ERROR: Index failed: {str(e)}")
+        return f"ERROR: {str(e)}"
     finally:
         driver.quit()
 
 if __name__ == "__main__":
-    print(scrape_bse_industry())
+    scrape_bse_industry()

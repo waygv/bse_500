@@ -2,11 +2,10 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 
 def create_bull_researcher(api_key: str):
-    # Allocation: Qwen model for strong dialectical reasoning in the Bull case
     llm = ChatGroq(
         api_key=api_key,
         model_name="qwen/qwen3-32b",
-        temperature=0.8
+        temperature=0.7
     )
 
     def bull_node(state):
@@ -19,31 +18,36 @@ def create_bull_researcher(api_key: str):
         operations_report = state.get("operations_report", "")
         news_report = state.get("news_report", "")
 
-        prompt = f"""You are a Bull Researcher advocated for investing in {company}. 
-Your goal is to build a strong, evidence-based case for why this stock is a BUY.
-Leverage the following reports:
-- Market Report: {market_report}
-- Fundamentals Report: {fundamentals_report}
-- Operations Report: {operations_report}
-- News Report: {news_report}
+        prompt = f"""You are a Bull Analyst for {company}. 
 
-Conversation history of the debate:
-{history}
+ROLE: Present a HIGHLY CONCISE bullish thesis.
+STRICT RULES:
+- USE BULLET POINTS ONLY.
+- MAX 5 BULLETS.
+- FOCUS ON: Strongest growth driver, Financial stability, and Operational reach.
+- NO PROSE, NO LONG INTROS.
 
-Focus on growth potential, competitive advantages (from ExportersIndia), and positive market indicators.
-Directly engage with the Bear's points if they have spoken. 
-Be persuasive but data-driven.
+Context:
+- Market: {market_report[:1000]}
+- Fundamentals: {fundamentals_report[:1000]}
+- Operations: {operations_report[:1000]}
+- History: {history[-1000:]}
+
+FORMAT:
+### BULLISH THESIS
+- **Point 1**: [Short reason]
+- **Point 2**: [Short reason]
+...
 """
         response = llm.invoke(prompt)
         argument = f"Bull Researcher: {response.content}"
         
-        new_history = history + "\n" + argument
         return {
             "investment_debate_state": {
                 **investment_debate_state,
-                "history": new_history,
+                "history": history + "\n" + argument,
                 "bull_history": investment_debate_state.get("bull_history", "") + "\n" + argument,
-                "current_response": argument,
+                "current_response": response.content,
                 "count": investment_debate_state.get("count", 0) + 1
             }
         }
