@@ -4,95 +4,143 @@ import os
 import time
 from datetime import datetime
 from typing import Dict, Any, List, Optional
+from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, BackgroundTasks, HTTPException
+from fastapi import FastAPI, BackgroundTasks, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
+from dotenv import load_dotenv
 
+import yfinance as yf
 from src.analysis.heatmap import build_heatmap_figures
-from src.analysis.llm_parser_gemini import process_single_company
-from src.main_scraper_orchestration import run_all, SCRIPTS_CONFIG, TARGET_COMPANY
+from src.graph.trading_graph import build_trading_graph
 
-DEBUG_LOG_PATH = r"c:\Users\vinay\OneDrive\Desktop\core\bse_500\.cursor\debug.log"
-SESSION_ID = "debug-session"
+from src.scrapers.bse_500_watchlist import scrape_bse_500_watchlist
+from src.scrapers.bse_industry import scrape_bse_industry
 
-app = FastAPI(title="BSE 500 Dashboard")
+load_dotenv()
+
+async def run_scrapers_sequentially():
+    """Run global scrapers one by one to avoid file renaming collisions."""
+    print("STARTUP: Running MarketWatch scraper...")
+    await asyncio.to_thread(scrape_bse_500_watchlist)
+    await asyncio.sleep(2)
+    print("STARTUP: Running Index scraper...")
+    await asyncio.to_thread(scrape_bse_industry)
+    print("STARTUP: Market data sequence finished.")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Run startup tasks."""
+    os.makedirs("data/processed", exist_ok=True)
+    os.makedirs("data/raw", exist_ok=True)
+    
+    # Always attempt refresh on startup to ensure heatmaps are there
+    asyncio.create_task(run_scrapers_sequentially())
+    yield
+
+app = FastAPI(title="BSE TradingAgents Terminal", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-
-def _agent_log(hypothesis_id: str, location: str, message: str, data: Dict[str, Any]):
-    payload = {
-        "sessionId": SESSION_ID,
-        "runId": "prefill",
-        "hypothesisId": hypothesis_id,
-        "location": location,
-        "message": message,
-        "data": data,
-        "timestamp": int(datetime.utcnow().timestamp() * 1000),
-    }
-    try:
-        # region agent log
-        with open(DEBUG_LOG_PATH, "a", encoding="utf-8") as _log:
-            _log.write(json.dumps(payload) + "\n")
-        # endregion
-    except Exception:
-        pass
-
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 
 @app.get("/")
 async def serve_index():
-    _agent_log("H1", "app.py:serve_index", "serve_index", {})
     return FileResponse("static/index.html")
-
 
 @app.get("/api/heatmap")
 async def heatmap_data():
-    _agent_log("H2", "app.py:heatmap_data", "start", {})
     try:
+        marketwatch_path = "data/processed/MarketWatch.csv"
+        index_path = "data/processed/Index.csv"
+        
+        if not os.path.exists(marketwatch_path) or not os.path.exists(index_path):
+             return JSONResponse(content={"error": "data_missing"})
+
         index_fig, market_fig = await asyncio.to_thread(build_heatmap_figures)
-        payload = {
+        return JSONResponse(content={
             "index_fig": json.loads(index_fig.to_json()),
             "market_fig": json.loads(market_fig.to_json()),
-        }
-        _agent_log("H2", "app.py:heatmap_data", "success", {"index_nodes": len(payload["index_fig"].get("data", [])), "market_nodes": len(payload["market_fig"].get("data", []))})
-        return JSONResponse(content=payload)
+        })
     except Exception as e:
-        _agent_log("H2", "app.py:heatmap_data", "error", {"error": str(e)})
-        raise
+        print(f"HEATMAP API ERROR: {e}")
+        return JSONResponse(content={"error": str(e)})
 
-
-def _build_script_plan(company: Optional[str]) -> List[Dict[str, Any]]:
-    config = []
-    if company:
-        config.extend(
-            [
-                {"name": "src/scrapers/bse_companywise.py", "args": [company]},
-                {"name": "src/scrapers/exportersindia_dom_scraper.py", "args": [company]},
-            ]
-        )
-    config.extend(SCRIPTS_CONFIG)
-    return config
-
-
-@app.post("/api/run-scrapers")
-async def run_scrapers(background_tasks: BackgroundTasks, company: Optional[str] = None):
-    run_id = f"api-{int(time.time())}"
-    scripts_plan = _build_script_plan(company or TARGET_COMPANY)
-    _agent_log("H1", "app.py:run_scrapers", "start", {"runId": run_id, "company": company or TARGET_COMPANY, "scripts": [c['name'] for c in scripts_plan]})
-    background_tasks.add_task(run_all, scripts_plan, run_id)
-    return {"status": "started", "runId": run_id, "scripts": [c["name"] for c in scripts_plan]}
-
-
-@app.get("/api/analysis")
-async def company_analysis(company: str):
-    if not company:
-        raise HTTPException(status_code=400, detail="company is required")
-    run_id = f"analysis-{int(time.time())}"
-    _agent_log("H4", "app.py:company_analysis", "start", {"company": company, "runId": run_id})
+@app.get("/api/search")
+async def search_stocks(q: str = ""):
+    if not q: return {"quotes": []}
     try:
-        result = await asyncio.to_thread(process_single_company, company, run_id)
-        _agent_log("H4", "app.py:company_analysis", "success", {"company": company})
-        return {"company": company, "analysis": result}
+        data = yf.Search(q, max_results=8).quotes
+        return {"quotes": data}
+    except Exception as e: return {"error": str(e), "quotes": []}
+
+@app.websocket("/ws/stream-analysis")
+async def stream_analysis(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        data = await websocket.receive_json()
+        raw_company = data.get("company", "")
+        # Clean company ticker: strip suffix like .NS and uppercase
+        company = raw_company.split(".")[0].upper().strip()
+        
+        if not company: return await websocket.close()
+
+        graph = build_trading_graph(GROQ_API_KEY)
+        initial_state = {
+            "company_of_interest": company,
+            "trade_date": datetime.now().strftime("%Y-%m-%d"),
+            "messages": [],
+            "investment_debate_state": {"count": 0, "history": ""},
+            "risk_debate_state": {"count": 0, "history": ""}
+        }
+
+        async for event in graph.astream(initial_state):
+            for node_name, output in event.items():
+                # ULTRA-ROBUST SERIALIZATION
+                serializable_update = {}
+                try:
+                    for key, value in output.items():
+                        if key == "messages":
+                            msgs = []
+                            for m in value:
+                                # Handle any message type (Human, AI, Tool, System)
+                                role = "user"
+                                if hasattr(m, "type"):
+                                    if m.type == "ai": role = "assistant"
+                                    elif m.type == "tool": role = "tool"
+                                    elif m.type == "system": role = "system"
+                                
+                                msgs.append({
+                                    "role": role,
+                                    "content": str(getattr(m, "content", m)),
+                                    "name": getattr(m, "name", node_name)
+                                })
+                            serializable_update[key] = msgs
+                        elif isinstance(value, (dict, list, str, int, float, bool)) or value is None:
+                            serializable_update[key] = value
+                        else:
+                            serializable_update[key] = str(value)
+
+                    await websocket.send_json({
+                        "node": node_name,
+                        "update": serializable_update,
+                        "timestamp": datetime.now().isoformat()
+                    })
+                except Exception as ser_err:
+                    print(f"SERIALIZATION ERROR in {node_name}: {ser_err}")
+                
+                await asyncio.sleep(0.1)
+
+        await websocket.send_json({"status": "completed"})
+    except WebSocketDisconnect: pass
     except Exception as e:
-        _agent_log("H4", "app.py:company_analysis", "error", {"company": company, "error": str(e)})
-        raise HTTPException(status_code=500, detail=str(e))
+        print(f"WS GLOBAL ERROR: {e}")
+        try: await websocket.send_json({"error": str(e)})
+        except: pass
+    finally:
+        try: await websocket.close()
+        except: pass
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app:app", host="127.0.0.1", port=8000, reload=True)

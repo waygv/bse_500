@@ -1,80 +1,78 @@
 import json
+import os
 from datetime import datetime
 from typing import Tuple
 
 import pandas as pd
 import plotly.express as px
 
-DEBUG_LOG_PATH = r"c:\Users\vinay\OneDrive\Desktop\core\bse_500\.cursor\debug.log"
-SESSION_ID = "debug-session"
-
-
-def _agent_log(hypothesis_id: str, location: str, message: str, data):
-    payload = {
-        "sessionId": SESSION_ID,
-        "runId": "prefill",
-        "hypothesisId": hypothesis_id,
-        "location": location,
-        "message": message,
-        "data": data,
-        "timestamp": int(datetime.utcnow().timestamp() * 1000),
-    }
-    try:
-        # region agent log
-        with open(DEBUG_LOG_PATH, "a", encoding="utf-8") as _log:
-            _log.write(json.dumps(payload) + "\n")
-        # endregion
-    except Exception:
-        pass
-
+# Get project root
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+DATA_PROCESSED_DIR = os.path.join(BASE_DIR, "data", "processed")
 
 def build_heatmap_figures() -> Tuple[px.treemap, px.treemap]:
-    """Builds index and market treemap figures."""
-    index_df = pd.read_csv("data/processed/Index.csv")
+    """Builds index and market treemap figures with robust error handling."""
+    index_path = os.path.join(DATA_PROCESSED_DIR, "Index.csv")
+    market_path = os.path.join(DATA_PROCESSED_DIR, "MarketWatch.csv")
+
+    if not os.path.exists(index_path) or not os.path.exists(market_path):
+        raise FileNotFoundError(f"CSV files not found at {DATA_PROCESSED_DIR}")
+
+    # --- Load Index Data ---
+    index_df = pd.read_csv(index_path)
     index_df.columns = index_df.columns.str.strip()
-    market_df = pd.read_csv("data/processed/MarketWatch.csv")
+    
+    # Handle numeric columns
+    numeric_cols = ["Open", "High", "Low", "Current Value", "Prev. Close", "Ch (pts)", "Ch (%)", "Turnover (Rs. Cr)"]
+    for col in numeric_cols:
+        if col in index_df.columns:
+            index_df[col] = pd.to_numeric(index_df[col].astype(str).str.replace(",", ""), errors="coerce")
+    
+    index_df = index_df.dropna(subset=["Index", "Current Value", "Turnover (Rs. Cr)"])
+
+    # --- Load Market Data ---
+    market_df = pd.read_csv(market_path)
     market_df.columns = market_df.columns.str.strip()
 
-    # Convert numeric columns safely
-    for col in index_df.columns[1:]:
-        index_df[col] = pd.to_numeric(index_df[col].astype(str).str.replace(",", ""), errors="coerce")
-
-    for col in market_df.columns[3:]:
-        market_df[col] = pd.to_numeric(market_df[col].astype(str).str.replace(",", ""), errors="coerce")
-
-    # Calculate stock % change
+    # Calculate Ch (%) if missing or for accuracy
+    market_df["Open"] = pd.to_numeric(market_df["Open"].astype(str).str.replace(",", ""), errors="coerce")
+    market_df["LTP"] = pd.to_numeric(market_df["LTP"].astype(str).str.replace(",", ""), errors="coerce")
+    market_df["Total Turnover (my image Lac)"] = pd.to_numeric(market_df["Total Turnover (my image Lac)"].astype(str).str.replace(",", ""), errors="coerce")
+    
     market_df["Ch (%)"] = ((market_df["LTP"] - market_df["Open"]) / market_df["Open"]) * 100
+    market_df = market_df.dropna(subset=["Security Name", "LTP", "Total Turnover (my image Lac)"])
 
-    # ---- INDEX HEATMAP (Treemap) ----
+    # ---- INDEX HEATMAP ----
     fig_index = px.treemap(
         index_df,
-        path=["Index"],
-        values="Turnover (Rs. Cr)",  # Size = liquidity
-        color="Ch (%)",  # Color = performance
-        hover_data=index_df.columns,
+        path=[px.Constant("BSE Indices"), "Index"],
+        values="Turnover (Rs. Cr)",
+        color="Ch (%)",
         color_continuous_scale="RdYlGn",
-        title="Index Heatmap (Performance vs Liquidity)",
+        color_continuous_midpoint=0,
+        title="BSE Index Liquidity & Performance",
+        hover_data=["Current Value", "Ch (%)", "Turnover (Rs. Cr)"]
     )
+    fig_index.update_layout(margin=dict(t=30, l=10, r=10, b=10), paper_bgcolor="#161b22", font_color="#e6edf3")
 
-    # ---- MARKET HEATMAP (Treemap) ----
+    # ---- MARKET HEATMAP ----
     fig_market = px.treemap(
         market_df,
-        path=["Security Group", "Security Name"],
-        values="Total Turnover (my image Lac)",  # Size = liquidity
-        color="Ch (%)",  # Color = performance
-        hover_data=market_df.columns,
+        path=[px.Constant("All Stocks"), "Security Group", "Security Name"],
+        values="Total Turnover (my image Lac)",
+        color="Ch (%)",
         color_continuous_scale="RdYlGn",
-        title="Market Heatmap (Stock Performance vs Turnover)",
+        color_continuous_midpoint=0,
+        title="Market Snapshot (Turnover vs Performance)",
+        hover_data=["LTP", "Ch (%)", "Total Turnover (my image Lac)"]
     )
-    _agent_log("H2", "heatmap.py:build_heatmap_figures", "heatmap_built", {"index_rows": len(index_df), "market_rows": len(market_df)})
+    fig_market.update_layout(margin=dict(t=30, l=10, r=10, b=10), paper_bgcolor="#161b22", font_color="#e6edf3")
+
     return fig_index, fig_market
 
-
-def main():
-    fig_index, fig_market = build_heatmap_figures()
-    fig_index.show()
-    fig_market.show()
-
-
 if __name__ == "__main__":
-    main()
+    try:
+        f1, f2 = build_heatmap_figures()
+        f1.show()
+    except Exception as e:
+        print(f"Error: {e}")

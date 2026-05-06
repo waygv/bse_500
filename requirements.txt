@@ -9,3 +9,11 @@ google-generativeai
 fastapi
 uvicorn
 requests
+langgraph
+langchain
+langchain-groq
+yfinance
+websockets
+pydantic
+langchain-core
+langchain-community
